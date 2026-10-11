@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>ChibiStudioExporter</AssemblyName>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <ViewerPath Condition="'$(ViewerPath)' == ''">$(MSBuildThisFileDirectory)..\..\.local\chibi-player</ViewerPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ChibiStudioExporter.cs" />
+    <Compile Include="ChibiGlbWriter.cs" />
+    <EmbeddedResource Include="face-presets.json" LogicalName="chibi-face-presets.json" />
+    <Reference Include="BepInEx"><HintPath>$(ViewerPath)\BepInEx\core\BepInEx.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="umamusume"><HintPath>$(ViewerPath)\UmaViewer_Data\Managed\umamusume.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Newtonsoft.Json"><HintPath>$(ViewerPath)\UmaViewer_Data\Managed\Newtonsoft.Json.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine"><HintPath>$(ViewerPath)\UmaViewer_Data\Managed\UnityEngine.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(ViewerPath)\UmaViewer_Data\Managed\UnityEngine.CoreModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.AnimationModule"><HintPath>$(ViewerPath)\UmaViewer_Data\Managed\UnityEngine.AnimationModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.ImageConversionModule"><HintPath>$(ViewerPath)\UmaViewer_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule"><HintPath>$(ViewerPath)\UmaViewer_Data\Managed\UnityEngine.JSONSerializeModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.AssetBundleModule"><HintPath>$(ViewerPath)\UmaViewer_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="netstandard"><HintPath>$(ViewerPath)\UmaViewer_Data\Managed\netstandard.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>

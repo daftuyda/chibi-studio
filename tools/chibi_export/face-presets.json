@@ -1,0 +1,21 @@
+{
+  "blink": 8,
+  "presets": {
+    "neutral": {"eyes": 0, "mouth": 0, "brows": 0},
+    "smile": {"eyes": 0, "mouth": 1, "brows": 0},
+    "happy": {"eyes": 9, "mouth": 2, "brows": 0},
+    "laughing": {"eyes": 9, "mouth": 9, "brows": 0},
+    "determined": {"eyes": 2, "mouth": 6, "brows": 2},
+    "angry": {"eyes": 2, "mouth": 7, "brows": 2},
+    "shy": {"eyes": 6, "mouth": 1, "brows": 4},
+    "sad": {"eyes": 6, "mouth": 3, "brows": 4},
+    "sleepy": {"eyes": 8, "mouth": 0, "brows": 4},
+    "annoyed": {"eyes": 3, "mouth": 4, "brows": 2},
+    "surprised": {"eyes": 1, "mouth": 5, "brows": 1},
+    "excited": {"eyes": 13, "mouth": 2, "brows": 1},
+    "shocked": {"eyes": 12, "mouth": 9, "brows": 1},
+    "dizzy": {"eyes": 14, "mouth": 11, "brows": 1},
+    "flustered": {"eyes": 7, "mouth": 11, "brows": 1},
+    "unimpressed": {"eyes": 10, "mouth": 0, "brows": 2}
+  }
+}

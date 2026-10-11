@@ -1,0 +1,3358 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "asset": "3d/chara/mini/body/mbdy1019_40/clothes/pfb_mbdy1019_40_cloth00",
+      "data": {
+        "collisionParam": [
+          {
+            "_collisionName": "Col_B_Head_Slv",
+            "_targetObjectName": "Head",
+            "_isOtherTarget": false,
+            "_offset": {
+              "x": 0.0,
+              "y": 0.1940000057220459,
+              "z": -0.0010000000474974513
+            },
+            "_offset2": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_radius": 0.23000000417232513,
+            "_distance": 0.0,
+            "_normal": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "_type": 0,
+            "_isInner": false,
+            "_transform": {
+              "instanceID": 0
+            }
+          },
+          {
+            "_collisionName": "Col_B_Hip_Slv",
+            "_targetObjectName": "Hip",
+            "_isOtherTarget": false,
+            "_offset": {
+              "x": 0.0,
+              "y": -0.1120000034570694,
+              "z": 0.0040000001899898052
+            },
+            "_offset2": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_radius": 0.25,
+            "_distance": 0.0,
+            "_normal": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "_type": 0,
+            "_isInner": false,
+            "_transform": {
+              "instanceID": 0
+            }
+          },
+          {
+            "_collisionName": "Col_B_Elbow_L_Slv",
+            "_targetObjectName": "Elbow_L",
+            "_isOtherTarget": false,
+            "_offset": {
+              "x": 0.004999999888241291,
+              "y": -0.019999999552965164,
+              "z": 0.0
+            },
+            "_offset2": {
+              "x": 0.004999999888241291,
+              "y": 0.13500000536441803,
+              "z": 0.0
+            },
+            "_radius": 0.054999999701976776,
+            "_distance": 0.0,
+            "_normal": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "_type": 2,
+            "_isInner": false,
+            "_transform": {
+              "instanceID": 0
+            }
+          },
+          {
+            "_collisionName": "Col_B_Elbow_R_Slv",
+            "_targetObjectName": "Elbow_R",
+            "_isOtherTarget": false,
+            "_offset": {
+              "x": 0.004999999888241291,
+              "y": 0.019999999552965164,
+              "z": 0.0
+            },
+            "_offset2": {
+              "x": 0.004999999888241291,
+              "y": -0.13500000536441803,
+              "z": 0.0
+            },
+            "_radius": 0.054999999701976776,
+            "_distance": 0.0,
+            "_normal": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "_type": 2,
+            "_isInner": false,
+            "_transform": {
+              "instanceID": 0
+            }
+          }
+        ],
+        "springParam": [
+          {
+            "_boneName": "Sp_Hi_MSkirt0_F_00",
+            "_stiffnessForce": 100.0,
+            "_dragForce": 130.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.029999999329447746,
+            "_collisionNameList": [],
+            "_childElements": [
+              {
+                "_boneName": "Sp_Hi_MSkirt0_F_01",
+                "_stiffnessForce": 300.0,
+                "_dragForce": 200.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.029999999329447746,
+                "_collisionNameList": [],
+                "_gravity": 100.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.019999999552965164,
+                "_horizontalWindRateSlow": 0.11999999731779099,
+                "_verticalWindRateFast": 0.039999999105930328,
+                "_horizontalWindRateFast": 0.17000000178813934,
+                "_isLimit": true,
+                "_limitAngleMin": {
+                  "x": 20.0,
+                  "y": 10.0,
+                  "z": 5.0
+                },
+                "_limitAngleMax": {
+                  "x": 12.0,
+                  "y": 10.0,
+                  "z": 5.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 120.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 180.0,
+              "y": 10.0,
+              "z": 180.0
+            },
+            "_limitAngleMax": {
+              "x": 180.0,
+              "y": 10.0,
+              "z": 180.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": false,
+            "_verticalWindRateSlow": 0.019999999552965164,
+            "_horizontalWindRateSlow": 0.11999999731779099,
+            "_verticalWindRateFast": 0.039999999105930328,
+            "_horizontalWindRateFast": 0.17000000178813934
+          },
+          {
+            "_boneName": "Sp_Hi_MSkirt0_FL_00",
+            "_stiffnessForce": 100.0,
+            "_dragForce": 150.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.029999999329447746,
+            "_collisionNameList": [],
+            "_childElements": [
+              {
+                "_boneName": "Sp_Hi_MSkirt0_FL_01",
+                "_stiffnessForce": 310.0,
+                "_dragForce": 200.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.029999999329447746,
+                "_collisionNameList": [],
+                "_gravity": 100.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.05000000074505806,
+                "_horizontalWindRateSlow": 0.25,
+                "_verticalWindRateFast": 0.2199999988079071,
+                "_horizontalWindRateFast": 0.40999999642372131,
+                "_isLimit": true,
+                "_limitAngleMin": {
+                  "x": 10.0,
+                  "y": 10.0,
+                  "z": 10.0
+                },
+                "_limitAngleMax": {
+                  "x": 12.0,
+                  "y": 10.0,
+                  "z": 10.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 120.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 180.0,
+              "y": 8.0,
+              "z": 180.0
+            },
+            "_limitAngleMax": {
+              "x": 180.0,
+              "y": 8.0,
+              "z": 180.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": false,
+            "_verticalWindRateSlow": 0.12999999523162842,
+            "_horizontalWindRateSlow": 0.2800000011920929,
+            "_verticalWindRateFast": 0.15000000596046448,
+            "_horizontalWindRateFast": 0.37000000476837158
+          },
+          {
+            "_boneName": "Sp_Hi_MSkirt0_FLL_00",
+            "_stiffnessForce": 120.0,
+            "_dragForce": 150.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.029999999329447746,
+            "_collisionNameList": [],
+            "_childElements": [
+              {
+                "_boneName": "Sp_Hi_MSkirt0_FLL_01",
+                "_stiffnessForce": 310.0,
+                "_dragForce": 200.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.029999999329447746,
+                "_collisionNameList": [],
+                "_gravity": 100.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.17000000178813934,
+                "_horizontalWindRateSlow": 0.33000001311302185,
+                "_verticalWindRateFast": 0.31999999284744263,
+                "_horizontalWindRateFast": 0.67000001668930054,
+                "_isLimit": true,
+                "_limitAngleMin": {
+                  "x": 2.0,
+                  "y": 10.0,
+                  "z": 10.0
+                },
+                "_limitAngleMax": {
+                  "x": 11.0,
+                  "y": 10.0,
+                  "z": 10.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 120.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 180.0,
+              "y": 8.0,
+              "z": 180.0
+            },
+            "_limitAngleMax": {
+              "x": 180.0,
+              "y": 8.0,
+              "z": 180.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": false,
+            "_verticalWindRateSlow": 0.20999999344348907,
+            "_horizontalWindRateSlow": 0.28999999165534973,
+            "_verticalWindRateFast": 0.38999998569488525,
+            "_horizontalWindRateFast": 0.64999997615814209
+          },
+          {
+            "_boneName": "Sp_Hi_MSkirt0_L_00",
+            "_stiffnessForce": 130.0,
+            "_dragForce": 170.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.029999999329447746,
+            "_collisionNameList": [],
+            "_childElements": [
+              {
+                "_boneName": "Sp_Hi_MSkirt0_L_01",
+                "_stiffnessForce": 330.0,
+                "_dragForce": 200.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.029999999329447746,
+                "_collisionNameList": [],
+                "_gravity": 100.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.25999999046325684,
+                "_horizontalWindRateSlow": 0.4699999988079071,
+                "_verticalWindRateFast": 0.33000001311302185,
+                "_horizontalWindRateFast": 0.5899999737739563,
+                "_isLimit": true,
+                "_limitAngleMin": {
+                  "x": 5.0,
+                  "y": 10.0,
+                  "z": 10.0
+                },
+                "_limitAngleMax": {
+                  "x": 11.0,
+                  "y": 10.0,
+                  "z": 10.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 120.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 180.0,
+              "y": 5.0,
+              "z": 180.0
+            },
+            "_limitAngleMax": {
+              "x": 180.0,
+              "y": 5.0,
+              "z": 180.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": false,
+            "_verticalWindRateSlow": 0.28999999165534973,
+            "_horizontalWindRateSlow": 0.40999999642372131,
+            "_verticalWindRateFast": 0.40999999642372131,
+            "_horizontalWindRateFast": 0.5899999737739563
+          },
+          {
+            "_boneName": "Sp_Hi_MSkirt0_BL_00",
+            "_stiffnessForce": 140.0,
+            "_dragForce": 180.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.029999999329447746,
+            "_collisionNameList": [],
+            "_childElements": [
+              {
+                "_boneName": "Sp_Hi_MSkirt0_BL_01",
+                "_stiffnessForce": 340.0,
+                "_dragForce": 200.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.029999999329447746,
+                "_collisionNameList": [],
+                "_gravity": 100.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.14000000059604645,
+                "_horizontalWindRateSlow": 0.28999999165534973,
+                "_verticalWindRateFast": 0.20000000298023224,
+                "_horizontalWindRateFast": 0.41999998688697815,
+                "_isLimit": true,
+                "_limitAngleMin": {
+                  "x": 5.0,
+                  "y": 10.0,
+                  "z": 10.0
+                },
+                "_limitAngleMax": {
+                  "x": 9.0,
+                  "y": 10.0,
+                  "z": 10.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 120.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 10.0,
+              "y": 8.0,
+              "z": 180.0
+            },
+            "_limitAngleMax": {
+              "x": 180.0,
+              "y": 8.0,
+              "z": 180.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": true,
+            "_verticalWindRateSlow": 0.56000000238418579,
+            "_horizontalWindRateSlow": 0.93999999761581421,
+            "_verticalWindRateFast": 0.75999999046325684,
+            "_horizontalWindRateFast": 1.0900000333786011
+          },
+          {
+            "_boneName": "Sp_Hi_MSkirt0_B_00",
+            "_stiffnessForce": 140.0,
+            "_dragForce": 180.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.029999999329447746,
+            "_collisionNameList": [],
+            "_childElements": [
+              {
+                "_boneName": "Sp_Hi_MSkirt0_B_01",
+                "_stiffnessForce": 340.0,
+                "_dragForce": 200.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.029999999329447746,
+                "_collisionNameList": [],
+                "_gravity": 100.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.85000002384185791,
+                "_horizontalWindRateSlow": 1.059999942779541,
+                "_verticalWindRateFast": 1.0499999523162842,
+                "_horizontalWindRateFast": 1.2999999523162842,
+                "_isLimit": true,
+                "_limitAngleMin": {
+                  "x": 10.0,
+                  "y": 10.0,
+                  "z": 10.0
+                },
+                "_limitAngleMax": {
+                  "x": 8.0,
+                  "y": 10.0,
+                  "z": 10.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 120.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 10.0,
+              "y": 10.0,
+              "z": 180.0
+            },
+            "_limitAngleMax": {
+              "x": 180.0,
+              "y": 10.0,
+              "z": 180.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": true,
+            "_verticalWindRateSlow": 0.93999999761581421,
+            "_horizontalWindRateSlow": 1.0199999809265137,
+            "_verticalWindRateFast": 1.559999942779541,
+            "_horizontalWindRateFast": 1.7899999618530273
+          },
+          {
+            "_boneName": "Sp_Hi_MSkirt0_FR_00",
+            "_stiffnessForce": 100.0,
+            "_dragForce": 150.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.029999999329447746,
+            "_collisionNameList": [],
+            "_childElements": [
+              {
+                "_boneName": "Sp_Hi_MSkirt0_FR_01",
+                "_stiffnessForce": 310.0,
+                "_dragForce": 200.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.029999999329447746,
+                "_collisionNameList": [],
+                "_gravity": 100.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.05000000074505806,
+                "_horizontalWindRateSlow": 0.25,
+                "_verticalWindRateFast": 0.2199999988079071,
+                "_horizontalWindRateFast": 0.40999999642372131,
+                "_isLimit": true,
+                "_limitAngleMin": {
+                  "x": 10.0,
+                  "y": 10.0,
+                  "z": 10.0
+                },
+                "_limitAngleMax": {
+                  "x": 12.0,
+                  "y": 10.0,
+                  "z": 10.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 120.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 180.0,
+              "y": 8.0,
+              "z": 180.0
+            },
+            "_limitAngleMax": {
+              "x": 180.0,
+              "y": 8.0,
+              "z": 180.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": false,
+            "_verticalWindRateSlow": 0.12999999523162842,
+            "_horizontalWindRateSlow": 0.2800000011920929,
+            "_verticalWindRateFast": 0.15000000596046448,
+            "_horizontalWindRateFast": 0.37000000476837158
+          },
+          {
+            "_boneName": "Sp_Hi_MSkirt0_FRR_00",
+            "_stiffnessForce": 120.0,
+            "_dragForce": 150.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.029999999329447746,
+            "_collisionNameList": [],
+            "_childElements": [
+              {
+                "_boneName": "Sp_Hi_MSkirt0_FRR_01",
+                "_stiffnessForce": 310.0,
+                "_dragForce": 200.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.029999999329447746,
+                "_collisionNameList": [],
+                "_gravity": 100.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.17000000178813934,
+                "_horizontalWindRateSlow": 0.33000001311302185,
+                "_verticalWindRateFast": 0.31999999284744263,
+                "_horizontalWindRateFast": 0.67000001668930054,
+                "_isLimit": true,
+                "_limitAngleMin": {
+                  "x": 2.0,
+                  "y": 10.0,
+                  "z": 10.0
+                },
+                "_limitAngleMax": {
+                  "x": 11.0,
+                  "y": 10.0,
+                  "z": 10.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 120.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 180.0,
+              "y": 8.0,
+              "z": 180.0
+            },
+            "_limitAngleMax": {
+              "x": 180.0,
+              "y": 8.0,
+              "z": 180.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": true,
+            "_verticalWindRateSlow": 0.20999999344348907,
+            "_horizontalWindRateSlow": 0.28999999165534973,
+            "_verticalWindRateFast": 0.38999998569488525,
+            "_horizontalWindRateFast": 0.64999997615814209
+          },
+          {
+            "_boneName": "Sp_Hi_MSkirt0_R_00",
+            "_stiffnessForce": 130.0,
+            "_dragForce": 170.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.029999999329447746,
+            "_collisionNameList": [],
+            "_childElements": [
+              {
+                "_boneName": "Sp_Hi_MSkirt0_R_01",
+                "_stiffnessForce": 330.0,
+                "_dragForce": 200.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.029999999329447746,
+                "_collisionNameList": [],
+                "_gravity": 100.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.25999999046325684,
+                "_horizontalWindRateSlow": 0.4699999988079071,
+                "_verticalWindRateFast": 0.33000001311302185,
+                "_horizontalWindRateFast": 0.5899999737739563,
+                "_isLimit": true,
+                "_limitAngleMin": {
+                  "x": 5.0,
+                  "y": 10.0,
+                  "z": 10.0
+                },
+                "_limitAngleMax": {
+                  "x": 11.0,
+                  "y": 10.0,
+                  "z": 10.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 120.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 180.0,
+              "y": 5.0,
+              "z": 180.0
+            },
+            "_limitAngleMax": {
+              "x": 180.0,
+              "y": 5.0,
+              "z": 180.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": true,
+            "_verticalWindRateSlow": 0.28999999165534973,
+            "_horizontalWindRateSlow": 0.40999999642372131,
+            "_verticalWindRateFast": 0.40999999642372131,
+            "_horizontalWindRateFast": 0.5899999737739563
+          },
+          {
+            "_boneName": "Sp_Hi_MSkirt0_BR_00",
+            "_stiffnessForce": 140.0,
+            "_dragForce": 180.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.029999999329447746,
+            "_collisionNameList": [],
+            "_childElements": [
+              {
+                "_boneName": "Sp_Hi_MSkirt0_BR_01",
+                "_stiffnessForce": 340.0,
+                "_dragForce": 200.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.029999999329447746,
+                "_collisionNameList": [],
+                "_gravity": 100.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.14000000059604645,
+                "_horizontalWindRateSlow": 0.28999999165534973,
+                "_verticalWindRateFast": 0.20000000298023224,
+                "_horizontalWindRateFast": 0.41999998688697815,
+                "_isLimit": true,
+                "_limitAngleMin": {
+                  "x": 5.0,
+                  "y": 10.0,
+                  "z": 10.0
+                },
+                "_limitAngleMax": {
+                  "x": 9.0,
+                  "y": 10.0,
+                  "z": 10.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 120.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 10.0,
+              "y": 8.0,
+              "z": 180.0
+            },
+            "_limitAngleMax": {
+              "x": 180.0,
+              "y": 8.0,
+              "z": 180.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": true,
+            "_verticalWindRateSlow": 0.56000000238418579,
+            "_horizontalWindRateSlow": 0.93999999761581421,
+            "_verticalWindRateFast": 0.75999999046325684,
+            "_horizontalWindRateFast": 1.0900000333786011
+          },
+          {
+            "_boneName": "Sp_Hi_MSkirt1_L_00",
+            "_stiffnessForce": 70.0,
+            "_dragForce": 150.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.029999999329447746,
+            "_collisionNameList": [],
+            "_childElements": [
+              {
+                "_boneName": "Sp_Hi_MSkirt1_L_01",
+                "_stiffnessForce": 200.0,
+                "_dragForce": 200.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.054999999701976776,
+                "_collisionNameList": [],
+                "_gravity": 10.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.49000000953674316,
+                "_horizontalWindRateSlow": 0.62999999523162842,
+                "_verticalWindRateFast": 0.61000001430511475,
+                "_horizontalWindRateFast": 0.89999997615814209,
+                "_isLimit": false,
+                "_limitAngleMin": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 180.0
+                },
+                "_limitAngleMax": {
+                  "x": 0.0,
+                  "y": 180.0,
+                  "z": 180.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 20.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 160.0,
+              "y": 80.0,
+              "z": 10.0
+            },
+            "_limitAngleMax": {
+              "x": 0.0,
+              "y": 80.0,
+              "z": 10.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": true,
+            "_verticalWindRateSlow": 0.28999999165534973,
+            "_horizontalWindRateSlow": 0.550000011920929,
+            "_verticalWindRateFast": 0.6600000262260437,
+            "_horizontalWindRateFast": 0.97000002861022949
+          },
+          {
+            "_boneName": "Sp_Hi_MSkirt1_R_00",
+            "_stiffnessForce": 70.0,
+            "_dragForce": 150.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.029999999329447746,
+            "_collisionNameList": [],
+            "_childElements": [
+              {
+                "_boneName": "Sp_Hi_MSkirt1_R_01",
+                "_stiffnessForce": 200.0,
+                "_dragForce": 200.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.054999999701976776,
+                "_collisionNameList": [],
+                "_gravity": 10.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.49000000953674316,
+                "_horizontalWindRateSlow": 0.62999999523162842,
+                "_verticalWindRateFast": 0.61000001430511475,
+                "_horizontalWindRateFast": 0.89999997615814209,
+                "_isLimit": false,
+                "_limitAngleMin": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 180.0
+                },
+                "_limitAngleMax": {
+                  "x": 0.0,
+                  "y": 180.0,
+                  "z": 180.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 20.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 160.0,
+              "y": 80.0,
+              "z": 10.0
+            },
+            "_limitAngleMax": {
+              "x": 0.0,
+              "y": 80.0,
+              "z": 10.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": true,
+            "_verticalWindRateSlow": 0.28999999165534973,
+            "_horizontalWindRateSlow": 0.550000011920929,
+            "_verticalWindRateFast": 0.6600000262260437,
+            "_horizontalWindRateFast": 0.97000002861022949
+          },
+          {
+            "_boneName": "Sp_Hi_MSkirt1_BL_00",
+            "_stiffnessForce": 70.0,
+            "_dragForce": 150.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.029999999329447746,
+            "_collisionNameList": [],
+            "_childElements": [
+              {
+                "_boneName": "Sp_Hi_MSkirt1_BL_01",
+                "_stiffnessForce": 200.0,
+                "_dragForce": 200.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.054999999701976776,
+                "_collisionNameList": [],
+                "_gravity": 10.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.37000000476837158,
+                "_horizontalWindRateSlow": 0.56000000238418579,
+                "_verticalWindRateFast": 0.61000001430511475,
+                "_horizontalWindRateFast": 0.89999997615814209,
+                "_isLimit": false,
+                "_limitAngleMin": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 180.0
+                },
+                "_limitAngleMax": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 180.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 20.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 160.0,
+              "y": 80.0,
+              "z": 5.0
+            },
+            "_limitAngleMax": {
+              "x": 0.0,
+              "y": 80.0,
+              "z": 5.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": true,
+            "_verticalWindRateSlow": 0.23999999463558197,
+            "_horizontalWindRateSlow": 0.40999999642372131,
+            "_verticalWindRateFast": 0.57999998331069946,
+            "_horizontalWindRateFast": 0.99000000953674316
+          },
+          {
+            "_boneName": "Sp_Hi_MSkirt1_BR_00",
+            "_stiffnessForce": 70.0,
+            "_dragForce": 150.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.029999999329447746,
+            "_collisionNameList": [],
+            "_childElements": [
+              {
+                "_boneName": "Sp_Hi_MSkirt1_BR_01",
+                "_stiffnessForce": 200.0,
+                "_dragForce": 200.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.054999999701976776,
+                "_collisionNameList": [],
+                "_gravity": 10.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.37000000476837158,
+                "_horizontalWindRateSlow": 0.56000000238418579,
+                "_verticalWindRateFast": 0.61000001430511475,
+                "_horizontalWindRateFast": 0.89999997615814209,
+                "_isLimit": false,
+                "_limitAngleMin": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 180.0
+                },
+                "_limitAngleMax": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 180.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 20.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 160.0,
+              "y": 80.0,
+              "z": 5.0
+            },
+            "_limitAngleMax": {
+              "x": 0.0,
+              "y": 80.0,
+              "z": 5.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": true,
+            "_verticalWindRateSlow": 0.23999999463558197,
+            "_horizontalWindRateSlow": 0.40999999642372131,
+            "_verticalWindRateFast": 0.57999998331069946,
+            "_horizontalWindRateFast": 0.99000000953674316
+          },
+          {
+            "_boneName": "Sp_Sh_Acc0_L_00",
+            "_stiffnessForce": 160.0,
+            "_dragForce": 250.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.0099999997764825821,
+            "_collisionNameList": [],
+            "_childElements": [
+              {
+                "_boneName": "Sp_Sh_Acc0_L_01",
+                "_stiffnessForce": 160.0,
+                "_dragForce": 250.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.0099999997764825821,
+                "_collisionNameList": [],
+                "_gravity": 100.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.059999998658895493,
+                "_horizontalWindRateSlow": 0.17000000178813934,
+                "_verticalWindRateFast": 0.89999997615814209,
+                "_horizontalWindRateFast": 1.0,
+                "_isLimit": false,
+                "_limitAngleMin": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 180.0
+                },
+                "_limitAngleMax": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 180.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 100.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 10.0,
+              "y": 5.0,
+              "z": 0.0
+            },
+            "_limitAngleMax": {
+              "x": 0.0,
+              "y": 5.0,
+              "z": 0.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": false,
+            "_verticalWindRateSlow": 0.33000001311302185,
+            "_horizontalWindRateSlow": 0.49000000953674316,
+            "_verticalWindRateFast": 0.89999997615814209,
+            "_horizontalWindRateFast": 1.0
+          },
+          {
+            "_boneName": "Sp_Sh_Acc0_R_00",
+            "_stiffnessForce": 160.0,
+            "_dragForce": 250.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.0099999997764825821,
+            "_collisionNameList": [],
+            "_childElements": [
+              {
+                "_boneName": "Sp_Sh_Acc0_R_01",
+                "_stiffnessForce": 160.0,
+                "_dragForce": 250.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.0099999997764825821,
+                "_collisionNameList": [],
+                "_gravity": 100.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.059999998658895493,
+                "_horizontalWindRateSlow": 0.17000000178813934,
+                "_verticalWindRateFast": 0.89999997615814209,
+                "_horizontalWindRateFast": 1.0,
+                "_isLimit": false,
+                "_limitAngleMin": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 180.0
+                },
+                "_limitAngleMax": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 180.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 100.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 10.0,
+              "y": 10.0,
+              "z": 0.0
+            },
+            "_limitAngleMax": {
+              "x": 0.0,
+              "y": 10.0,
+              "z": 0.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": false,
+            "_verticalWindRateSlow": 0.33000001311302185,
+            "_horizontalWindRateSlow": 0.49000000953674316,
+            "_verticalWindRateFast": 0.89999997615814209,
+            "_horizontalWindRateFast": 1.0
+          },
+          {
+            "_boneName": "Sp_So_Acc0_L_00",
+            "_stiffnessForce": 180.0,
+            "_dragForce": 460.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.029999999329447746,
+            "_collisionNameList": [],
+            "_childElements": [
+              {
+                "_boneName": "Sp_So_Acc0_L_01",
+                "_stiffnessForce": 180.0,
+                "_dragForce": 460.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.029999999329447746,
+                "_collisionNameList": [],
+                "_gravity": 150.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.12999999523162842,
+                "_horizontalWindRateSlow": 0.23999999463558197,
+                "_verticalWindRateFast": 0.89999997615814209,
+                "_horizontalWindRateFast": 1.0,
+                "_isLimit": true,
+                "_limitAngleMin": {
+                  "x": 25.0,
+                  "y": 16.0,
+                  "z": 28.0
+                },
+                "_limitAngleMax": {
+                  "x": 25.0,
+                  "y": 12.0,
+                  "z": 28.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 150.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 5.0,
+              "y": 2.0,
+              "z": 15.0
+            },
+            "_limitAngleMax": {
+              "x": 0.0,
+              "y": 3.0,
+              "z": 15.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": false,
+            "_verticalWindRateSlow": 0.36000001430511475,
+            "_horizontalWindRateSlow": 0.47999998927116394,
+            "_verticalWindRateFast": 0.68000000715255737,
+            "_horizontalWindRateFast": 0.81000000238418579
+          },
+          {
+            "_boneName": "Sp_So_Acc0_R_00",
+            "_stiffnessForce": 180.0,
+            "_dragForce": 460.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.029999999329447746,
+            "_collisionNameList": [],
+            "_childElements": [
+              {
+                "_boneName": "Sp_So_Acc0_R_01",
+                "_stiffnessForce": 180.0,
+                "_dragForce": 460.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.029999999329447746,
+                "_collisionNameList": [],
+                "_gravity": 150.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.12999999523162842,
+                "_horizontalWindRateSlow": 0.23999999463558197,
+                "_verticalWindRateFast": 0.89999997615814209,
+                "_horizontalWindRateFast": 1.0,
+                "_isLimit": true,
+                "_limitAngleMin": {
+                  "x": 25.0,
+                  "y": 16.0,
+                  "z": 28.0
+                },
+                "_limitAngleMax": {
+                  "x": 25.0,
+                  "y": 12.0,
+                  "z": 28.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 150.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 5.0,
+              "y": 2.0,
+              "z": 15.0
+            },
+            "_limitAngleMax": {
+              "x": 0.0,
+              "y": 3.0,
+              "z": 15.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": false,
+            "_verticalWindRateSlow": 0.36000001430511475,
+            "_horizontalWindRateSlow": 0.47999998927116394,
+            "_verticalWindRateFast": 0.68000000715255737,
+            "_horizontalWindRateFast": 0.81000000238418579
+          },
+          {
+            "_boneName": "Sp_El_Sleeve0_L_00",
+            "_stiffnessForce": 270.0,
+            "_dragForce": 1500.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.05000000074505806,
+            "_collisionNameList": [
+              "Col_B_Elbow_L_Slv",
+              "Col_B_Hip_Slv",
+              "Col_B_Head_Slv"
+            ],
+            "_childElements": [
+              {
+                "_boneName": "Sp_El_Sleeve0_L_01",
+                "_stiffnessForce": 240.0,
+                "_dragForce": 1500.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.039999999105930328,
+                "_collisionNameList": [
+                  "Col_B_Elbow_L_Slv",
+                  "Col_B_Hip_Slv",
+                  "Col_B_Head_Slv"
+                ],
+                "_gravity": 2200.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.43000000715255737,
+                "_horizontalWindRateSlow": 0.550000011920929,
+                "_verticalWindRateFast": 0.50999999046325684,
+                "_horizontalWindRateFast": 0.72000002861022949,
+                "_isLimit": true,
+                "_limitAngleMin": {
+                  "x": 90.0,
+                  "y": 50.0,
+                  "z": 90.0
+                },
+                "_limitAngleMax": {
+                  "x": 90.0,
+                  "y": 50.0,
+                  "z": 90.0
+                },
+                "MoveSpringApplyRate": 1.0
+              },
+              {
+                "_boneName": "Sp_El_Sleeve0_L_02",
+                "_stiffnessForce": 110.0,
+                "_dragForce": 250.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.039999999105930328,
+                "_collisionNameList": [
+                  "Col_B_Elbow_L_Slv",
+                  "Col_B_Hip_Slv",
+                  "Col_B_Head_Slv"
+                ],
+                "_gravity": 90.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.2800000011920929,
+                "_horizontalWindRateSlow": 0.37999999523162842,
+                "_verticalWindRateFast": 0.40999999642372131,
+                "_horizontalWindRateFast": 0.5899999737739563,
+                "_isLimit": false,
+                "_limitAngleMin": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 180.0
+                },
+                "_limitAngleMax": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 180.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 4000.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 180.0,
+              "y": 180.0,
+              "z": 180.0
+            },
+            "_limitAngleMax": {
+              "x": 130.0,
+              "y": 180.0,
+              "z": 180.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": true,
+            "_verticalWindRateSlow": 0.23000000417232513,
+            "_horizontalWindRateSlow": 0.37999999523162842,
+            "_verticalWindRateFast": 0.37999999523162842,
+            "_horizontalWindRateFast": 0.56999999284744263
+          },
+          {
+            "_boneName": "Sp_El_Sleeve0_R_00",
+            "_stiffnessForce": 270.0,
+            "_dragForce": 1500.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.05000000074505806,
+            "_collisionNameList": [
+              "Col_B_Elbow_R_Slv",
+              "Col_B_Hip_Slv",
+              "Col_B_Head_Slv"
+            ],
+            "_childElements": [
+              {
+                "_boneName": "Sp_El_Sleeve0_R_01",
+                "_stiffnessForce": 240.0,
+                "_dragForce": 1500.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.039999999105930328,
+                "_collisionNameList": [
+                  "Col_B_Elbow_R_Slv",
+                  "Col_B_Hip_Slv",
+                  "Col_B_Head_Slv"
+                ],
+                "_gravity": 2200.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.43000000715255737,
+                "_horizontalWindRateSlow": 0.550000011920929,
+                "_verticalWindRateFast": 0.50999999046325684,
+                "_horizontalWindRateFast": 0.72000002861022949,
+                "_isLimit": true,
+                "_limitAngleMin": {
+                  "x": 90.0,
+                  "y": 50.0,
+                  "z": 90.0
+                },
+                "_limitAngleMax": {
+                  "x": 90.0,
+                  "y": 50.0,
+                  "z": 90.0
+                },
+                "MoveSpringApplyRate": 1.0
+              },
+              {
+                "_boneName": "Sp_El_Sleeve0_R_02",
+                "_stiffnessForce": 110.0,
+                "_dragForce": 250.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.039999999105930328,
+                "_collisionNameList": [
+                  "Col_B_Elbow_R_Slv",
+                  "Col_B_Hip_Slv",
+                  "Col_B_Head_Slv"
+                ],
+                "_gravity": 90.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.2800000011920929,
+                "_horizontalWindRateSlow": 0.37999999523162842,
+                "_verticalWindRateFast": 0.40999999642372131,
+                "_horizontalWindRateFast": 0.5899999737739563,
+                "_isLimit": false,
+                "_limitAngleMin": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 180.0
+                },
+                "_limitAngleMax": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 180.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 4000.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 180.0,
+              "y": 180.0,
+              "z": 180.0
+            },
+            "_limitAngleMax": {
+              "x": 130.0,
+              "y": 180.0,
+              "z": 180.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": true,
+            "_verticalWindRateSlow": 0.23000000417232513,
+            "_horizontalWindRateSlow": 0.37999999523162842,
+            "_verticalWindRateFast": 0.37999999523162842,
+            "_horizontalWindRateFast": 0.56999999284744263
+          },
+          {
+            "_boneName": "Sp_Ch_Ribbon0_L_00",
+            "_stiffnessForce": 240.0,
+            "_dragForce": 270.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.013000000268220901,
+            "_collisionNameList": [],
+            "_childElements": [
+              {
+                "_boneName": "Sp_Ch_Ribbon0_L_01",
+                "_stiffnessForce": 120.0,
+                "_dragForce": 270.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.013000000268220901,
+                "_collisionNameList": [],
+                "_gravity": 110.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.05000000074505806,
+                "_horizontalWindRateSlow": 0.20999999344348907,
+                "_verticalWindRateFast": 0.11999999731779099,
+                "_horizontalWindRateFast": 0.23999999463558197,
+                "_isLimit": false,
+                "_limitAngleMin": {
+                  "x": 30.0,
+                  "y": 50.0,
+                  "z": 10.0
+                },
+                "_limitAngleMax": {
+                  "x": 10.0,
+                  "y": 50.0,
+                  "z": 10.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 110.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 30.0,
+              "y": 7.0,
+              "z": 10.0
+            },
+            "_limitAngleMax": {
+              "x": 8.0,
+              "y": 20.0,
+              "z": 10.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": false,
+            "_verticalWindRateSlow": 0.17000000178813934,
+            "_horizontalWindRateSlow": 0.25999999046325684,
+            "_verticalWindRateFast": 0.25999999046325684,
+            "_horizontalWindRateFast": 0.31999999284744263
+          },
+          {
+            "_boneName": "Sp_Ch_Ribbon0_R_00",
+            "_stiffnessForce": 240.0,
+            "_dragForce": 270.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.013000000268220901,
+            "_collisionNameList": [],
+            "_childElements": [
+              {
+                "_boneName": "Sp_Ch_Ribbon0_R_01",
+                "_stiffnessForce": 120.0,
+                "_dragForce": 270.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.013000000268220901,
+                "_collisionNameList": [],
+                "_gravity": 110.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.05000000074505806,
+                "_horizontalWindRateSlow": 0.20999999344348907,
+                "_verticalWindRateFast": 0.11999999731779099,
+                "_horizontalWindRateFast": 0.23999999463558197,
+                "_isLimit": false,
+                "_limitAngleMin": {
+                  "x": 30.0,
+                  "y": 50.0,
+                  "z": 10.0
+                },
+                "_limitAngleMax": {
+                  "x": 10.0,
+                  "y": 50.0,
+                  "z": 10.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 110.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 30.0,
+              "y": 7.0,
+              "z": 10.0
+            },
+            "_limitAngleMax": {
+              "x": 8.0,
+              "y": 20.0,
+              "z": 10.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": false,
+            "_verticalWindRateSlow": 0.17000000178813934,
+            "_horizontalWindRateSlow": 0.25999999046325684,
+            "_verticalWindRateFast": 0.25999999046325684,
+            "_horizontalWindRateFast": 0.31999999284744263
+          },
+          {
+            "_boneName": "Sp_Ch_Acc0_C_00",
+            "_stiffnessForce": 120.0,
+            "_dragForce": 250.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.012000000104308128,
+            "_collisionNameList": [],
+            "_childElements": [],
+            "_gravity": 100.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 30.0,
+              "y": 13.0,
+              "z": 5.0
+            },
+            "_limitAngleMax": {
+              "x": 10.0,
+              "y": 13.0,
+              "z": 5.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": false,
+            "_verticalWindRateSlow": 0.27000001072883606,
+            "_horizontalWindRateSlow": 0.20999999344348907,
+            "_verticalWindRateFast": 0.34999999403953552,
+            "_horizontalWindRateFast": 0.28999999165534973
+          }
+        ],
+        "ConnectedBoneList": [
+          {
+            "Bone1": "Sp_Hi_MSkirt0_F_01",
+            "Bone2": "Sp_Hi_MSkirt0_FL_01",
+            "Intensity": 0.40000000596046448,
+            "IsFold": false
+          },
+          {
+            "Bone1": "Sp_Hi_MSkirt0_F_01",
+            "Bone2": "Sp_Hi_MSkirt0_FR_01",
+            "Intensity": 0.40000000596046448,
+            "IsFold": false
+          }
+        ],
+        "enableVerticalWind": true,
+        "enableHorizontalWind": true,
+        "centerWindAngleSlow": 3.0,
+        "centerWindAngleFast": 9.0,
+        "verticalCycleSlow": 0.699999988079071,
+        "horizontalCycleSlow": 1.3999999761581421,
+        "verticalAngleWidthSlow": 15.0,
+        "horizontalAngleWidthSlow": 32.0,
+        "verticalCycleFast": 0.60000002384185791,
+        "horizontalCycleFast": 1.2000000476837158,
+        "verticalAngleWidthFast": 18.0,
+        "horizontalAngleWidthFast": 38.0,
+        "IsEnableHipMoveParam": true,
+        "HipMoveInfluenceDistance": 0.02500000037252903,
+        "HipMoveInfluenceMaxDistance": 0.05000000074505806,
+        "UseCorrectScaleCalc": false,
+        "DynamicBones": []
+      }
+    },
+    {
+      "asset": "3d/chara/mini/head/mchr1019_40/clothes/pfb_mchr1019_40_cloth00",
+      "data": {
+        "collisionParam": [
+          {
+            "_collisionName": "Col_Head_Round",
+            "_targetObjectName": "Head",
+            "_isOtherTarget": false,
+            "_offset": {
+              "x": 0.0,
+              "y": 0.25299999117851257,
+              "z": -0.071999996900558472
+            },
+            "_offset2": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_radius": 0.2800000011920929,
+            "_distance": 0.0,
+            "_normal": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "_type": 0,
+            "_isInner": false,
+            "_transform": {
+              "instanceID": 0
+            }
+          },
+          {
+            "_collisionName": "Col_Head_Face_L",
+            "_targetObjectName": "Head",
+            "_isOtherTarget": false,
+            "_offset": {
+              "x": 0.10000000149011612,
+              "y": 0.18000000715255737,
+              "z": 0.037000000476837158
+            },
+            "_offset2": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_radius": 0.30000001192092896,
+            "_distance": 0.0,
+            "_normal": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "_type": 0,
+            "_isInner": false,
+            "_transform": {
+              "instanceID": 0
+            }
+          },
+          {
+            "_collisionName": "Col_Head_Face_R",
+            "_targetObjectName": "Head",
+            "_isOtherTarget": false,
+            "_offset": {
+              "x": -0.10000000149011612,
+              "y": 0.18000000715255737,
+              "z": 0.037000000476837158
+            },
+            "_offset2": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_radius": 0.30000001192092896,
+            "_distance": 0.0,
+            "_normal": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "_type": 0,
+            "_isInner": false,
+            "_transform": {
+              "instanceID": 0
+            }
+          },
+          {
+            "_collisionName": "Col_Head_BackWall_F",
+            "_targetObjectName": "Head",
+            "_isOtherTarget": false,
+            "_offset": {
+              "x": 0.0,
+              "y": 0.10199999809265137,
+              "z": -0.55099999904632568
+            },
+            "_offset2": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_radius": 0.60000002384185791,
+            "_distance": 0.0,
+            "_normal": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "_type": 0,
+            "_isInner": false,
+            "_transform": {
+              "instanceID": 0
+            }
+          },
+          {
+            "_collisionName": "Col_Head_Acc_C",
+            "_targetObjectName": "Head",
+            "_isOtherTarget": false,
+            "_offset": {
+              "x": 0.0,
+              "y": 0.2199999988079071,
+              "z": -0.020999999716877937
+            },
+            "_offset2": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_radius": 0.30000001192092896,
+            "_distance": 0.0,
+            "_normal": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "_type": 0,
+            "_isInner": false,
+            "_transform": {
+              "instanceID": 0
+            }
+          },
+          {
+            "_collisionName": "Col_Head_Acc_R_01",
+            "_targetObjectName": "Head",
+            "_isOtherTarget": false,
+            "_offset": {
+              "x": -0.11100000143051147,
+              "y": 0.21699999272823334,
+              "z": -0.016000000759959221
+            },
+            "_offset2": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_radius": 0.34999999403953552,
+            "_distance": 0.0,
+            "_normal": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "_type": 0,
+            "_isInner": false,
+            "_transform": {
+              "instanceID": 0
+            }
+          },
+          {
+            "_collisionName": "Col_Head_Acc_R_02",
+            "_targetObjectName": "Head",
+            "_isOtherTarget": false,
+            "_offset": {
+              "x": 0.27799999713897705,
+              "y": 0.24300000071525574,
+              "z": -0.1289999932050705
+            },
+            "_offset2": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_radius": 0.15000000596046448,
+            "_distance": 0.0,
+            "_normal": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "_type": 0,
+            "_isInner": false,
+            "_transform": {
+              "instanceID": 0
+            }
+          },
+          {
+            "_collisionName": "Col_Chest_Hair_L",
+            "_targetObjectName": "Chest",
+            "_isOtherTarget": false,
+            "_offset": {
+              "x": -0.029999999329447746,
+              "y": -0.012000000104308128,
+              "z": -0.026000000536441803
+            },
+            "_offset2": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_radius": 0.125,
+            "_distance": 0.0,
+            "_normal": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "_type": 0,
+            "_isInner": false,
+            "_transform": {
+              "instanceID": 0
+            }
+          },
+          {
+            "_collisionName": "Col_Chest_Hair_B_02",
+            "_targetObjectName": "Chest",
+            "_isOtherTarget": false,
+            "_offset": {
+              "x": 0.0,
+              "y": 0.0060000000521540642,
+              "z": 0.82599997520446777
+            },
+            "_offset2": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_radius": 0.85000002384185791,
+            "_distance": 0.0,
+            "_normal": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "_type": 0,
+            "_isInner": false,
+            "_transform": {
+              "instanceID": 0
+            }
+          },
+          {
+            "_collisionName": "Col_Hip_Hair_B",
+            "_targetObjectName": "Hip",
+            "_isOtherTarget": false,
+            "_offset": {
+              "x": 0.0,
+              "y": -0.11100000143051147,
+              "z": 0.046999998390674591
+            },
+            "_offset2": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_radius": 0.23999999463558197,
+            "_distance": 0.0,
+            "_normal": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "_type": 0,
+            "_isInner": false,
+            "_transform": {
+              "instanceID": 0
+            }
+          },
+          {
+            "_collisionName": "Col_Arm_L_Hair",
+            "_targetObjectName": "Arm_L",
+            "_isOtherTarget": false,
+            "_offset": {
+              "x": 0.004999999888241291,
+              "y": 0.014999999664723873,
+              "z": 0.004999999888241291
+            },
+            "_offset2": {
+              "x": 0.004999999888241291,
+              "y": 0.17499999701976776,
+              "z": 0.004999999888241291
+            },
+            "_radius": 0.05000000074505806,
+            "_distance": 0.0,
+            "_normal": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_type": 2,
+            "_isInner": false,
+            "_transform": {
+              "instanceID": 0
+            }
+          },
+          {
+            "_collisionName": "Col_Arm_R_Hair",
+            "_targetObjectName": "Arm_R",
+            "_isOtherTarget": false,
+            "_offset": {
+              "x": 0.004999999888241291,
+              "y": -0.014999999664723873,
+              "z": 0.004999999888241291
+            },
+            "_offset2": {
+              "x": 0.004999999888241291,
+              "y": -0.17499999701976776,
+              "z": 0.004999999888241291
+            },
+            "_radius": 0.05000000074505806,
+            "_distance": 0.0,
+            "_normal": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_type": 2,
+            "_isInner": false,
+            "_transform": {
+              "instanceID": 0
+            }
+          },
+          {
+            "_collisionName": "Col_Elbow_L_Hair",
+            "_targetObjectName": "Elbow_L",
+            "_isOtherTarget": false,
+            "_offset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_offset2": {
+              "x": -0.0040000001899898052,
+              "y": 0.14000000059604645,
+              "z": 0.0
+            },
+            "_radius": 0.05000000074505806,
+            "_distance": 0.0,
+            "_normal": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_type": 2,
+            "_isInner": false,
+            "_transform": {
+              "instanceID": 0
+            }
+          },
+          {
+            "_collisionName": "Col_Elbow_R_Hair",
+            "_targetObjectName": "Elbow_R",
+            "_isOtherTarget": false,
+            "_offset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_offset2": {
+              "x": -0.0040000001899898052,
+              "y": -0.14000000059604645,
+              "z": 0.0
+            },
+            "_radius": 0.05000000074505806,
+            "_distance": 0.0,
+            "_normal": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_type": 2,
+            "_isInner": false,
+            "_transform": {
+              "instanceID": 0
+            }
+          }
+        ],
+        "springParam": [
+          {
+            "_boneName": "Sp_He_Hair0_C_00",
+            "_stiffnessForce": 200.0,
+            "_dragForce": 400.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.0099999997764825821,
+            "_collisionNameList": [
+              "Col_Head_Round"
+            ],
+            "_childElements": [
+              {
+                "_boneName": "Sp_He_Hair0_C_01",
+                "_stiffnessForce": 300.0,
+                "_dragForce": 400.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.0099999997764825821,
+                "_collisionNameList": [
+                  "Col_Head_Round"
+                ],
+                "_gravity": 50.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.5,
+                "_horizontalWindRateSlow": 0.5,
+                "_verticalWindRateFast": 0.5,
+                "_horizontalWindRateFast": 0.5,
+                "_isLimit": true,
+                "_limitAngleMin": {
+                  "x": 15.0,
+                  "y": 10.0,
+                  "z": 0.0
+                },
+                "_limitAngleMax": {
+                  "x": 1.0,
+                  "y": 10.0,
+                  "z": 0.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 50.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 15.0,
+              "y": 10.0,
+              "z": 5.0
+            },
+            "_limitAngleMax": {
+              "x": 2.0,
+              "y": 10.0,
+              "z": 5.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": false,
+            "_verticalWindRateSlow": 0.5,
+            "_horizontalWindRateSlow": 0.5,
+            "_verticalWindRateFast": 0.5,
+            "_horizontalWindRateFast": 0.5
+          },
+          {
+            "_boneName": "Sp_He_Hair2_L_00",
+            "_stiffnessForce": 200.0,
+            "_dragForce": 500.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.017999999225139618,
+            "_collisionNameList": [
+              "Col_Head_BackWall_F",
+              "Col_Arm_L_Hair",
+              "Col_Head_Face_L"
+            ],
+            "_childElements": [
+              {
+                "_boneName": "Sp_He_Hair2_L_01",
+                "_stiffnessForce": 200.0,
+                "_dragForce": 500.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.017999999225139618,
+                "_collisionNameList": [
+                  "Col_Head_BackWall_F",
+                  "Col_Chest_Hair_L",
+                  "Col_Arm_L_Hair",
+                  "Col_Head_Face_L"
+                ],
+                "_gravity": 100.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.5,
+                "_horizontalWindRateSlow": 0.5,
+                "_verticalWindRateFast": 0.5,
+                "_horizontalWindRateFast": 0.5,
+                "_isLimit": true,
+                "_limitAngleMin": {
+                  "x": 25.0,
+                  "y": 15.0,
+                  "z": 0.0
+                },
+                "_limitAngleMax": {
+                  "x": 5.0,
+                  "y": 15.0,
+                  "z": 0.0
+                },
+                "MoveSpringApplyRate": 1.0
+              },
+              {
+                "_boneName": "Sp_He_Hair2_L_02",
+                "_stiffnessForce": 320.0,
+                "_dragForce": 510.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.029999999329447746,
+                "_collisionNameList": [
+                  "Col_Head_BackWall_F",
+                  "Col_Arm_L_Hair",
+                  "Col_Head_Face_L"
+                ],
+                "_gravity": 200.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.5,
+                "_horizontalWindRateSlow": 0.5,
+                "_verticalWindRateFast": 0.5,
+                "_horizontalWindRateFast": 0.5,
+                "_isLimit": false,
+                "_limitAngleMin": {
+                  "x": 35.0,
+                  "y": 35.0,
+                  "z": 25.0
+                },
+                "_limitAngleMax": {
+                  "x": 35.0,
+                  "y": 35.0,
+                  "z": 25.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 100.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 25.0,
+              "y": 15.0,
+              "z": 0.0
+            },
+            "_limitAngleMax": {
+              "x": 0.0,
+              "y": 15.0,
+              "z": 0.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": true,
+            "_verticalWindRateSlow": 0.60000002384185791,
+            "_horizontalWindRateSlow": 0.60000002384185791,
+            "_verticalWindRateFast": 0.60000002384185791,
+            "_horizontalWindRateFast": 0.60000002384185791
+          },
+          {
+            "_boneName": "Sp_He_Hair2_R_00",
+            "_stiffnessForce": 200.0,
+            "_dragForce": 500.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.017999999225139618,
+            "_collisionNameList": [
+              "Col_Head_BackWall_F",
+              "Col_Arm_R_Hair",
+              "Col_Head_Face_R"
+            ],
+            "_childElements": [
+              {
+                "_boneName": "Sp_He_Hair2_R_01",
+                "_stiffnessForce": 200.0,
+                "_dragForce": 500.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.017999999225139618,
+                "_collisionNameList": [
+                  "Col_Head_BackWall_F",
+                  "Col_Arm_R_Hair",
+                  "Col_Head_Face_R"
+                ],
+                "_gravity": 100.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.5,
+                "_horizontalWindRateSlow": 0.5,
+                "_verticalWindRateFast": 0.5,
+                "_horizontalWindRateFast": 0.5,
+                "_isLimit": true,
+                "_limitAngleMin": {
+                  "x": 25.0,
+                  "y": 15.0,
+                  "z": 0.0
+                },
+                "_limitAngleMax": {
+                  "x": 5.0,
+                  "y": 15.0,
+                  "z": 0.0
+                },
+                "MoveSpringApplyRate": 1.0
+              },
+              {
+                "_boneName": "Sp_He_Hair2_R_02",
+                "_stiffnessForce": 320.0,
+                "_dragForce": 510.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.029999999329447746,
+                "_collisionNameList": [
+                  "Col_Head_BackWall_F",
+                  "Col_Arm_R_Hair",
+                  "Col_Head_Face_R"
+                ],
+                "_gravity": 200.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.5,
+                "_horizontalWindRateSlow": 0.5,
+                "_verticalWindRateFast": 0.5,
+                "_horizontalWindRateFast": 0.5,
+                "_isLimit": false,
+                "_limitAngleMin": {
+                  "x": 35.0,
+                  "y": 35.0,
+                  "z": 25.0
+                },
+                "_limitAngleMax": {
+                  "x": 35.0,
+                  "y": 35.0,
+                  "z": 25.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 100.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 25.0,
+              "y": 15.0,
+              "z": 0.0
+            },
+            "_limitAngleMax": {
+              "x": 0.0,
+              "y": 15.0,
+              "z": 0.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": false,
+            "_verticalWindRateSlow": 0.60000002384185791,
+            "_horizontalWindRateSlow": 0.60000002384185791,
+            "_verticalWindRateFast": 0.60000002384185791,
+            "_horizontalWindRateFast": 0.60000002384185791
+          },
+          {
+            "_boneName": "Sp_He_Hair3_L_00",
+            "_stiffnessForce": 250.0,
+            "_dragForce": 550.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.029999999329447746,
+            "_collisionNameList": [
+              "Col_Arm_L_Hair",
+              "Col_Elbow_L_Hair"
+            ],
+            "_childElements": [
+              {
+                "_boneName": "Sp_He_Hair3_L_01",
+                "_stiffnessForce": 145.0,
+                "_dragForce": 730.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.030999999493360519,
+                "_collisionNameList": [
+                  "Col_Arm_L_Hair",
+                  "Col_Elbow_L_Hair"
+                ],
+                "_gravity": 420.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.85000002384185791,
+                "_horizontalWindRateSlow": 1.2999999523162842,
+                "_verticalWindRateFast": 0.89999997615814209,
+                "_horizontalWindRateFast": 1.7999999523162842,
+                "_isLimit": true,
+                "_limitAngleMin": {
+                  "x": 60.0,
+                  "y": 40.0,
+                  "z": 30.0
+                },
+                "_limitAngleMax": {
+                  "x": 50.0,
+                  "y": 40.0,
+                  "z": 30.0
+                },
+                "MoveSpringApplyRate": 1.0
+              },
+              {
+                "_boneName": "Sp_He_Hair3_L_02",
+                "_stiffnessForce": 200.0,
+                "_dragForce": 890.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.032000001519918442,
+                "_collisionNameList": [
+                  "Col_Hip_Hair_B",
+                  "Col_Elbow_L_Hair"
+                ],
+                "_gravity": 500.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.949999988079071,
+                "_horizontalWindRateSlow": 0.20000000298023224,
+                "_verticalWindRateFast": 1.2000000476837158,
+                "_horizontalWindRateFast": 0.64999997615814209,
+                "_isLimit": true,
+                "_limitAngleMin": {
+                  "x": 50.0,
+                  "y": 40.0,
+                  "z": 25.0
+                },
+                "_limitAngleMax": {
+                  "x": 50.0,
+                  "y": 40.0,
+                  "z": 25.0
+                },
+                "MoveSpringApplyRate": 1.0
+              },
+              {
+                "_boneName": "Sp_He_Hair3_L_03",
+                "_stiffnessForce": 150.0,
+                "_dragForce": 700.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.035000000149011612,
+                "_collisionNameList": [
+                  "Col_Chest_Hair_B_02",
+                  "Col_Hip_Hair_B",
+                  "Col_Elbow_L_Hair"
+                ],
+                "_gravity": 400.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.699999988079071,
+                "_horizontalWindRateSlow": 0.20000000298023224,
+                "_verticalWindRateFast": 1.3500000238418579,
+                "_horizontalWindRateFast": 0.550000011920929,
+                "_isLimit": true,
+                "_limitAngleMin": {
+                  "x": 45.0,
+                  "y": 30.0,
+                  "z": 25.0
+                },
+                "_limitAngleMax": {
+                  "x": 55.0,
+                  "y": 30.0,
+                  "z": 25.0
+                },
+                "MoveSpringApplyRate": 1.0
+              },
+              {
+                "_boneName": "Sp_He_Hair3_L_04",
+                "_stiffnessForce": 160.0,
+                "_dragForce": 850.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.035000000149011612,
+                "_collisionNameList": [],
+                "_gravity": 80.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.20000000298023224,
+                "_horizontalWindRateSlow": 0.10000000149011612,
+                "_verticalWindRateFast": 0.20000000298023224,
+                "_horizontalWindRateFast": 0.10000000149011612,
+                "_isLimit": true,
+                "_limitAngleMin": {
+                  "x": 35.0,
+                  "y": 20.0,
+                  "z": 25.0
+                },
+                "_limitAngleMax": {
+                  "x": 45.0,
+                  "y": 20.0,
+                  "z": 25.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 330.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 45.0,
+              "y": 35.0,
+              "z": 35.0
+            },
+            "_limitAngleMax": {
+              "x": 30.0,
+              "y": 35.0,
+              "z": 35.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": true,
+            "_verticalWindRateSlow": 0.5,
+            "_horizontalWindRateSlow": 0.5,
+            "_verticalWindRateFast": 0.64999997615814209,
+            "_horizontalWindRateFast": 1.2000000476837158
+          },
+          {
+            "_boneName": "Sp_He_Hair3_R_00",
+            "_stiffnessForce": 250.0,
+            "_dragForce": 550.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.029999999329447746,
+            "_collisionNameList": [
+              "Col_Arm_R_Hair",
+              "Col_Elbow_R_Hair"
+            ],
+            "_childElements": [
+              {
+                "_boneName": "Sp_He_Hair3_R_01",
+                "_stiffnessForce": 145.0,
+                "_dragForce": 730.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.030999999493360519,
+                "_collisionNameList": [
+                  "Col_Arm_R_Hair",
+                  "Col_Elbow_R_Hair"
+                ],
+                "_gravity": 420.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.85000002384185791,
+                "_horizontalWindRateSlow": 1.2999999523162842,
+                "_verticalWindRateFast": 0.89999997615814209,
+                "_horizontalWindRateFast": 1.7999999523162842,
+                "_isLimit": true,
+                "_limitAngleMin": {
+                  "x": 60.0,
+                  "y": 40.0,
+                  "z": 30.0
+                },
+                "_limitAngleMax": {
+                  "x": 50.0,
+                  "y": 40.0,
+                  "z": 30.0
+                },
+                "MoveSpringApplyRate": 1.0
+              },
+              {
+                "_boneName": "Sp_He_Hair3_R_02",
+                "_stiffnessForce": 200.0,
+                "_dragForce": 890.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.032000001519918442,
+                "_collisionNameList": [
+                  "Col_Hip_Hair_B",
+                  "Col_Elbow_R_Hair"
+                ],
+                "_gravity": 500.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.949999988079071,
+                "_horizontalWindRateSlow": 0.20000000298023224,
+                "_verticalWindRateFast": 1.2000000476837158,
+                "_horizontalWindRateFast": 0.64999997615814209,
+                "_isLimit": true,
+                "_limitAngleMin": {
+                  "x": 50.0,
+                  "y": 40.0,
+                  "z": 25.0
+                },
+                "_limitAngleMax": {
+                  "x": 50.0,
+                  "y": 40.0,
+                  "z": 25.0
+                },
+                "MoveSpringApplyRate": 1.0
+              },
+              {
+                "_boneName": "Sp_He_Hair3_R_03",
+                "_stiffnessForce": 150.0,
+                "_dragForce": 700.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.035000000149011612,
+                "_collisionNameList": [
+                  "Col_Hip_Hair_B",
+                  "Col_Elbow_R_Hair"
+                ],
+                "_gravity": 400.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.699999988079071,
+                "_horizontalWindRateSlow": 0.20000000298023224,
+                "_verticalWindRateFast": 1.3500000238418579,
+                "_horizontalWindRateFast": 0.550000011920929,
+                "_isLimit": true,
+                "_limitAngleMin": {
+                  "x": 45.0,
+                  "y": 30.0,
+                  "z": 25.0
+                },
+                "_limitAngleMax": {
+                  "x": 55.0,
+                  "y": 30.0,
+                  "z": 25.0
+                },
+                "MoveSpringApplyRate": 1.0
+              },
+              {
+                "_boneName": "Sp_He_Hair3_R_04",
+                "_stiffnessForce": 160.0,
+                "_dragForce": 850.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.035000000149011612,
+                "_collisionNameList": [],
+                "_gravity": 80.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.20000000298023224,
+                "_horizontalWindRateSlow": 0.10000000149011612,
+                "_verticalWindRateFast": 0.20000000298023224,
+                "_horizontalWindRateFast": 0.10000000149011612,
+                "_isLimit": true,
+                "_limitAngleMin": {
+                  "x": 35.0,
+                  "y": 20.0,
+                  "z": 25.0
+                },
+                "_limitAngleMax": {
+                  "x": 45.0,
+                  "y": 20.0,
+                  "z": 25.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 330.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 45.0,
+              "y": 35.0,
+              "z": 35.0
+            },
+            "_limitAngleMax": {
+              "x": 30.0,
+              "y": 35.0,
+              "z": 35.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": true,
+            "_verticalWindRateSlow": 0.5,
+            "_horizontalWindRateSlow": 0.5,
+            "_verticalWindRateFast": 0.64999997615814209,
+            "_horizontalWindRateFast": 1.2000000476837158
+          },
+          {
+            "_boneName": "Sp_He_Acc0_C_00",
+            "_stiffnessForce": 50.0,
+            "_dragForce": 160.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.014999999664723873,
+            "_collisionNameList": [
+              "Col_Head_Acc_C"
+            ],
+            "_childElements": [
+              {
+                "_boneName": "Sp_He_Acc0_C_01",
+                "_stiffnessForce": 50.0,
+                "_dragForce": 160.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.014999999664723873,
+                "_collisionNameList": [
+                  "Col_Head_Acc_C"
+                ],
+                "_gravity": 100.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.0,
+                "_horizontalWindRateSlow": 0.0,
+                "_verticalWindRateFast": 0.0,
+                "_horizontalWindRateFast": 0.0,
+                "_isLimit": false,
+                "_limitAngleMin": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 180.0
+                },
+                "_limitAngleMax": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 180.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 100.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 17.0,
+              "y": 9.0,
+              "z": 55.0
+            },
+            "_limitAngleMax": {
+              "x": 0.0,
+              "y": 9.0,
+              "z": 55.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": false,
+            "_verticalWindRateSlow": 0.60000002384185791,
+            "_horizontalWindRateSlow": 0.25,
+            "_verticalWindRateFast": 0.60000002384185791,
+            "_horizontalWindRateFast": 0.25
+          },
+          {
+            "_boneName": "Sp_He_Acc0_R_00",
+            "_stiffnessForce": 300.0,
+            "_dragForce": 200.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.0099999997764825821,
+            "_collisionNameList": [
+              "Col_Head_Acc_R_02",
+              "Col_Head_Acc_R_01"
+            ],
+            "_childElements": [
+              {
+                "_boneName": "Sp_He_Acc0_R_01",
+                "_stiffnessForce": 100.0,
+                "_dragForce": 460.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.0099999997764825821,
+                "_collisionNameList": [
+                  "Col_Head_Acc_R_02",
+                  "Col_Head_Acc_R_01"
+                ],
+                "_gravity": 95.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 0.60000002384185791,
+                "_horizontalWindRateSlow": 0.30000001192092896,
+                "_verticalWindRateFast": 0.60000002384185791,
+                "_horizontalWindRateFast": 0.30000001192092896,
+                "_isLimit": true,
+                "_limitAngleMin": {
+                  "x": 45.0,
+                  "y": 55.0,
+                  "z": 45.0
+                },
+                "_limitAngleMax": {
+                  "x": 45.0,
+                  "y": 45.0,
+                  "z": 45.0
+                },
+                "MoveSpringApplyRate": 1.0
+              },
+              {
+                "_boneName": "Sp_He_Acc0_R_02",
+                "_stiffnessForce": 100.0,
+                "_dragForce": 300.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.0099999997764825821,
+                "_collisionNameList": [],
+                "_gravity": 50.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 1.0,
+                "_horizontalWindRateSlow": 1.0,
+                "_verticalWindRateFast": 1.0,
+                "_horizontalWindRateFast": 1.0,
+                "_isLimit": true,
+                "_limitAngleMin": {
+                  "x": 45.0,
+                  "y": 45.0,
+                  "z": 30.0
+                },
+                "_limitAngleMax": {
+                  "x": 45.0,
+                  "y": 45.0,
+                  "z": 30.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 300.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 53.0,
+              "y": 52.0,
+              "z": 10.0
+            },
+            "_limitAngleMax": {
+              "x": 0.0,
+              "y": 35.0,
+              "z": 10.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": true,
+            "_verticalWindRateSlow": 0.40000000596046448,
+            "_horizontalWindRateSlow": 0.40000000596046448,
+            "_verticalWindRateFast": 0.40000000596046448,
+            "_horizontalWindRateFast": 0.40000000596046448
+          },
+          {
+            "_boneName": "Sp_He_Ear0_L_00",
+            "_stiffnessForce": 500.0,
+            "_dragForce": 600.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.0099999997764825821,
+            "_collisionNameList": [],
+            "_childElements": [
+              {
+                "_boneName": "Sp_He_Ear0_L_01",
+                "_stiffnessForce": 600.0,
+                "_dragForce": 650.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.0099999997764825821,
+                "_collisionNameList": [],
+                "_gravity": 0.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 1.0,
+                "_horizontalWindRateSlow": 1.0,
+                "_verticalWindRateFast": 1.0,
+                "_horizontalWindRateFast": 1.0,
+                "_isLimit": false,
+                "_limitAngleMin": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 180.0
+                },
+                "_limitAngleMax": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 180.0
+                },
+                "MoveSpringApplyRate": 1.0
+              },
+              {
+                "_boneName": "Sp_He_Ear0_L_02",
+                "_stiffnessForce": 600.0,
+                "_dragForce": 650.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.0099999997764825821,
+                "_collisionNameList": [],
+                "_gravity": 0.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 1.0,
+                "_horizontalWindRateSlow": 1.0,
+                "_verticalWindRateFast": 1.0,
+                "_horizontalWindRateFast": 1.0,
+                "_isLimit": false,
+                "_limitAngleMin": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 180.0
+                },
+                "_limitAngleMax": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 180.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 0.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": false,
+            "_limitAngleMin": {
+              "x": 180.0,
+              "y": 180.0,
+              "z": 180.0
+            },
+            "_limitAngleMax": {
+              "x": 180.0,
+              "y": 180.0,
+              "z": 180.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": false,
+            "_verticalWindRateSlow": 1.0,
+            "_horizontalWindRateSlow": 1.0,
+            "_verticalWindRateFast": 1.0,
+            "_horizontalWindRateFast": 1.0
+          },
+          {
+            "_boneName": "Sp_He_Ear0_R_00",
+            "_stiffnessForce": 500.0,
+            "_dragForce": 600.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.019999999552965164,
+            "_collisionNameList": [],
+            "_childElements": [
+              {
+                "_boneName": "Sp_He_Ear0_R_01",
+                "_stiffnessForce": 600.0,
+                "_dragForce": 650.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.019999999552965164,
+                "_collisionNameList": [],
+                "_gravity": 0.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 1.0,
+                "_horizontalWindRateSlow": 1.0,
+                "_verticalWindRateFast": 1.0,
+                "_horizontalWindRateFast": 1.0,
+                "_isLimit": false,
+                "_limitAngleMin": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 180.0
+                },
+                "_limitAngleMax": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 180.0
+                },
+                "MoveSpringApplyRate": 1.0
+              },
+              {
+                "_boneName": "Sp_He_Ear0_R_02",
+                "_stiffnessForce": 600.0,
+                "_dragForce": 650.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.019999999552965164,
+                "_collisionNameList": [],
+                "_gravity": 0.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 1.0,
+                "_horizontalWindRateSlow": 1.0,
+                "_verticalWindRateFast": 1.0,
+                "_horizontalWindRateFast": 1.0,
+                "_isLimit": false,
+                "_limitAngleMin": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 180.0
+                },
+                "_limitAngleMax": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 180.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 0.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": false,
+            "_limitAngleMin": {
+              "x": 180.0,
+              "y": 180.0,
+              "z": 180.0
+            },
+            "_limitAngleMax": {
+              "x": 180.0,
+              "y": 180.0,
+              "z": 180.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": false,
+            "_verticalWindRateSlow": 1.0,
+            "_horizontalWindRateSlow": 1.0,
+            "_verticalWindRateFast": 1.0,
+            "_horizontalWindRateFast": 1.0
+          },
+          {
+            "_boneName": "Sp_Ch_Bust0_L_00",
+            "_stiffnessForce": 700.0,
+            "_dragForce": 300.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.019999999552965164,
+            "_collisionNameList": [],
+            "_childElements": [
+              {
+                "_boneName": "Sp_Ch_Bust0_L_01",
+                "_stiffnessForce": 750.0,
+                "_dragForce": 400.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.019999999552965164,
+                "_collisionNameList": [],
+                "_gravity": 0.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 1.0,
+                "_horizontalWindRateSlow": 1.0,
+                "_verticalWindRateFast": 1.0,
+                "_horizontalWindRateFast": 1.0,
+                "_isLimit": true,
+                "_limitAngleMin": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 0.0
+                },
+                "_limitAngleMax": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 0.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 0.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 180.0,
+              "y": 180.0,
+              "z": 0.0
+            },
+            "_limitAngleMax": {
+              "x": 180.0,
+              "y": 180.0,
+              "z": 0.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": true,
+            "_verticalWindRateSlow": 1.0,
+            "_horizontalWindRateSlow": 1.0,
+            "_verticalWindRateFast": 1.0,
+            "_horizontalWindRateFast": 1.0
+          },
+          {
+            "_boneName": "Sp_Ch_Bust0_R_00",
+            "_stiffnessForce": 700.0,
+            "_dragForce": 300.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.019999999552965164,
+            "_collisionNameList": [],
+            "_childElements": [
+              {
+                "_boneName": "Sp_Ch_Bust0_R_01",
+                "_stiffnessForce": 750.0,
+                "_dragForce": 400.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.019999999552965164,
+                "_collisionNameList": [],
+                "_gravity": 0.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 1.0,
+                "_horizontalWindRateSlow": 1.0,
+                "_verticalWindRateFast": 1.0,
+                "_horizontalWindRateFast": 1.0,
+                "_isLimit": true,
+                "_limitAngleMin": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 0.0
+                },
+                "_limitAngleMax": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 0.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 0.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 180.0,
+              "y": 180.0,
+              "z": 0.0
+            },
+            "_limitAngleMax": {
+              "x": 180.0,
+              "y": 180.0,
+              "z": 0.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": true,
+            "_verticalWindRateSlow": 1.0,
+            "_horizontalWindRateSlow": 1.0,
+            "_verticalWindRateFast": 1.0,
+            "_horizontalWindRateFast": 1.0
+          }
+        ],
+        "ConnectedBoneList": [],
+        "enableVerticalWind": true,
+        "enableHorizontalWind": true,
+        "centerWindAngleSlow": 0.0,
+        "centerWindAngleFast": 0.0,
+        "verticalCycleSlow": 0.699999988079071,
+        "horizontalCycleSlow": 1.3999999761581421,
+        "verticalAngleWidthSlow": 18.0,
+        "horizontalAngleWidthSlow": 35.0,
+        "verticalCycleFast": 0.60000002384185791,
+        "horizontalCycleFast": 1.2000000476837158,
+        "verticalAngleWidthFast": 22.0,
+        "horizontalAngleWidthFast": 40.0,
+        "IsEnableHipMoveParam": true,
+        "HipMoveInfluenceDistance": 0.02500000037252903,
+        "HipMoveInfluenceMaxDistance": 0.05000000074505806,
+        "UseCorrectScaleCalc": false,
+        "DynamicBones": []
+      }
+    },
+    {
+      "asset": "3d/chara/mini/tail/mtail0001_00/clothes/pfb_mtail0001_00_cloth00",
+      "data": {
+        "collisionParam": [],
+        "springParam": [
+          {
+            "_boneName": "Sp_Hi_Tail0_B_00",
+            "_stiffnessForce": 170.0,
+            "_dragForce": 200.0,
+            "_springForce": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "_collisionRadius": 0.029999999329447746,
+            "_collisionNameList": [
+              "Col_Chest_Tail",
+              "Col_Hip_Tail"
+            ],
+            "_childElements": [
+              {
+                "_boneName": "Sp_Hi_Tail0_B_01",
+                "_stiffnessForce": 190.0,
+                "_dragForce": 400.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.05000000074505806,
+                "_collisionNameList": [
+                  "Col_Chest_Tail",
+                  "Col_Hip_Tail"
+                ],
+                "_gravity": 50.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 1.0,
+                "_horizontalWindRateSlow": 1.0,
+                "_verticalWindRateFast": 1.0,
+                "_horizontalWindRateFast": 1.0,
+                "_isLimit": true,
+                "_limitAngleMin": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 0.0
+                },
+                "_limitAngleMax": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 0.0
+                },
+                "MoveSpringApplyRate": 1.0
+              },
+              {
+                "_boneName": "Sp_Hi_Tail0_B_02",
+                "_stiffnessForce": 210.0,
+                "_dragForce": 600.0,
+                "_springForce": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "_collisionRadius": 0.075000002980232239,
+                "_collisionNameList": [
+                  "Col_Chest_Tail",
+                  "Col_Hip_Tail"
+                ],
+                "_gravity": 50.0,
+                "_capability": 0,
+                "_capsGroupIndex": 0,
+                "_verticalWindRateSlow": 1.0,
+                "_horizontalWindRateSlow": 1.0,
+                "_verticalWindRateFast": 1.0,
+                "_horizontalWindRateFast": 1.0,
+                "_isLimit": true,
+                "_limitAngleMin": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 0.0
+                },
+                "_limitAngleMax": {
+                  "x": 180.0,
+                  "y": 180.0,
+                  "z": 0.0
+                },
+                "MoveSpringApplyRate": 1.0
+              }
+            ],
+            "_gravity": 50.0,
+            "_capability": 0,
+            "_capsGroupIndex": 0,
+            "_isLimit": true,
+            "_limitAngleMin": {
+              "x": 180.0,
+              "y": 180.0,
+              "z": 0.0
+            },
+            "_limitAngleMax": {
+              "x": 180.0,
+              "y": 180.0,
+              "z": 0.0
+            },
+            "MoveSpringApplyRate": 1.0,
+            "_needSimulateEndBone": true,
+            "_verticalWindRateSlow": 1.0,
+            "_horizontalWindRateSlow": 1.0,
+            "_verticalWindRateFast": 1.0,
+            "_horizontalWindRateFast": 1.0
+          }
+        ],
+        "ConnectedBoneList": [],
+        "enableVerticalWind": true,
+        "enableHorizontalWind": true,
+        "centerWindAngleSlow": 0.0,
+        "centerWindAngleFast": 0.0,
+        "verticalCycleSlow": 0.77899998426437378,
+        "horizontalCycleSlow": 0.85399997234344482,
+        "verticalAngleWidthSlow": 17.299999237060547,
+        "horizontalAngleWidthSlow": 24.899999618530273,
+        "verticalCycleFast": 0.48199999332427979,
+        "horizontalCycleFast": 0.58300000429153442,
+        "verticalAngleWidthFast": 35.700000762939453,
+        "horizontalAngleWidthFast": 45.5,
+        "IsEnableHipMoveParam": true,
+        "HipMoveInfluenceDistance": 0.0099999997764825821,
+        "HipMoveInfluenceMaxDistance": 0.029999999329447746,
+        "UseCorrectScaleCalc": false,
+        "DynamicBones": []
+      }
+    }
+  ]
+}

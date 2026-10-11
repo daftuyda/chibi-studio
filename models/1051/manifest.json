@@ -1,0 +1,204 @@
+{
+  "name": "Nishino Flower",
+  "character_id": 1051,
+  "outfit": "Layered Petals",
+  "costume": "00",
+  "dress_id": 105101,
+  "import_profile": "405bb85ebfe7cb8d9b9ee162d0003f0d95c93a17930138d43f0bfb0e1e754e7c",
+  "animation_groups": {
+    "anm_min_eve_chr1051_00_idle01_loop": "Character",
+    "anm_min_eve_type00_walk01_loop": "Movement",
+    "anm_min_eve_type00_run00_loop": "Movement",
+    "anm_min_eve_type00_skip01_loop": "Movement",
+    "anm_min_eve_type00_hello04_loop": "Greetings",
+    "anm_min_eve_type00_bow02_loop": "Greetings",
+    "anm_min_eve_type00_bow03_loop": "Greetings",
+    "anm_min_eve_type00_clap01_loop": "Greetings",
+    "anm_min_eve_type00_come03_loop": "Greetings",
+    "anm_min_eve_type00_joy05_loop": "Reactions",
+    "anm_min_eve_type00_happy03_loop": "Reactions",
+    "anm_min_eve_type00_happy05_loop": "Reactions",
+    "anm_min_eve_type00_yell01_loop": "Reactions",
+    "anm_min_eve_type00_yell02_loop": "Reactions",
+    "anm_min_eve_type00_yell03_loop": "Reactions",
+    "anm_min_eve_type00_gatts04_loop": "Reactions",
+    "anm_min_eve_type00_gatts06_loop": "Reactions",
+    "anm_min_eve_type00_shy02_loop": "Reactions",
+    "anm_min_eve_type00_shy03_loop": "Reactions",
+    "anm_min_eve_type00_shy06_loop": "Reactions",
+    "anm_min_eve_type00_hope01_loop": "Reactions",
+    "anm_min_eve_type00_idea01_loop": "Reactions",
+    "anm_min_eve_type00_hungry01_loop": "Reactions",
+    "anm_min_eve_type00_udekumi02_loop": "Poses",
+    "anm_min_eve_type00_koshiate01_loop": "Poses",
+    "anm_min_eve_type00_muneate02_loop": "Poses",
+    "anm_min_eve_type00_tekumi01_loop": "Poses",
+    "anm_min_eve_type00_pose03_loop": "Poses",
+    "anm_min_eve_type00_soppo06_loop": "Poses",
+    "anm_min_eve_type00_dance01_loop": "Dance",
+    "anm_min_eve_type00_dance05_loop": "Dance",
+    "anm_min_eve_type00_dance09_loop": "Dance",
+    "anm_min_eve_type00_dance11_loop": "Dance",
+    "anm_min_eve_type00_dance13_loop": "Dance",
+    "anm_min_eve_type00_dance14_loop": "Dance",
+    "anm_min_eve_type00_dance15_loop": "Dance",
+    "anm_min_eve_chr1051_00_res01_loop": "Character",
+    "anm_min_eve_chr1051_26_res01_loop": "Character"
+  },
+  "model": "model.glb",
+  "animation_labels": {
+    "anm_min_eve_chr1051_00_idle01_loop": "Idle",
+    "anm_min_eve_type00_walk01_loop": "Walk",
+    "anm_min_eve_type00_run00_loop": "Run",
+    "anm_min_eve_type00_skip01_loop": "Skip",
+    "anm_min_eve_type00_hello04_loop": "Wave hello",
+    "anm_min_eve_type00_bow02_loop": "Bow",
+    "anm_min_eve_type00_bow03_loop": "Deep bow",
+    "anm_min_eve_type00_clap01_loop": "Clap",
+    "anm_min_eve_type00_come03_loop": "Come here",
+    "anm_min_eve_type00_joy05_loop": "Celebrate",
+    "anm_min_eve_type00_happy03_loop": "Happy",
+    "anm_min_eve_type00_happy05_loop": "Delighted",
+    "anm_min_eve_type00_yell01_loop": "Cheer 1",
+    "anm_min_eve_type00_yell02_loop": "Cheer 2",
+    "anm_min_eve_type00_yell03_loop": "Cheer 3",
+    "anm_min_eve_type00_gatts04_loop": "Determined 1",
+    "anm_min_eve_type00_gatts06_loop": "Determined 2",
+    "anm_min_eve_type00_shy02_loop": "Shy 1",
+    "anm_min_eve_type00_shy03_loop": "Shy 2",
+    "anm_min_eve_type00_shy06_loop": "Shy 3",
+    "anm_min_eve_type00_hope01_loop": "Hopeful",
+    "anm_min_eve_type00_idea01_loop": "An idea",
+    "anm_min_eve_type00_hungry01_loop": "Hungry",
+    "anm_min_eve_type00_udekumi02_loop": "Arms crossed",
+    "anm_min_eve_type00_koshiate01_loop": "Hands on hips",
+    "anm_min_eve_type00_muneate02_loop": "Hand on heart",
+    "anm_min_eve_type00_tekumi01_loop": "Hands together",
+    "anm_min_eve_type00_pose03_loop": "Strike a pose",
+    "anm_min_eve_type00_soppo06_loop": "Look away",
+    "anm_min_eve_type00_dance01_loop": "Dance 1",
+    "anm_min_eve_type00_dance05_loop": "Dance 2",
+    "anm_min_eve_type00_dance09_loop": "Dance 3",
+    "anm_min_eve_type00_dance11_loop": "Dance 4",
+    "anm_min_eve_type00_dance13_loop": "Dance 5",
+    "anm_min_eve_type00_dance14_loop": "Dance 6",
+    "anm_min_eve_type00_dance15_loop": "Dance 7",
+    "anm_min_eve_chr1051_00_res01_loop": "Character pose 00 res01",
+    "anm_min_eve_chr1051_26_res01_loop": "Character pose 26 res01"
+  },
+  "faces": {
+    "meshes": {
+      "M_Eye": {
+        "part": "eyes",
+        "columns": 4,
+        "rows": 8,
+        "flip_v": true
+      },
+      "M_Mayu_L": {
+        "part": "brows",
+        "columns": 4,
+        "rows": 4,
+        "flip_v": true
+      },
+      "M_Mayu_R": {
+        "part": "brows",
+        "columns": 4,
+        "rows": 4,
+        "flip_v": true
+      },
+      "M_Mouth": {
+        "part": "mouth",
+        "columns": 4,
+        "rows": 8,
+        "flip_v": true
+      }
+    },
+    "blink": 8,
+    "presets": {
+      "neutral": {
+        "eyes": 0,
+        "mouth": 0,
+        "brows": 0
+      },
+      "smile": {
+        "eyes": 0,
+        "mouth": 1,
+        "brows": 0
+      },
+      "happy": {
+        "eyes": 9,
+        "mouth": 2,
+        "brows": 0
+      },
+      "laughing": {
+        "eyes": 9,
+        "mouth": 9,
+        "brows": 0
+      },
+      "determined": {
+        "eyes": 2,
+        "mouth": 6,
+        "brows": 2
+      },
+      "angry": {
+        "eyes": 2,
+        "mouth": 7,
+        "brows": 2
+      },
+      "shy": {
+        "eyes": 6,
+        "mouth": 1,
+        "brows": 4
+      },
+      "sad": {
+        "eyes": 6,
+        "mouth": 3,
+        "brows": 4
+      },
+      "sleepy": {
+        "eyes": 8,
+        "mouth": 0,
+        "brows": 4
+      },
+      "annoyed": {
+        "eyes": 3,
+        "mouth": 4,
+        "brows": 2
+      },
+      "surprised": {
+        "eyes": 1,
+        "mouth": 5,
+        "brows": 1
+      },
+      "excited": {
+        "eyes": 13,
+        "mouth": 2,
+        "brows": 1
+      },
+      "shocked": {
+        "eyes": 12,
+        "mouth": 9,
+        "brows": 1
+      },
+      "dizzy": {
+        "eyes": 14,
+        "mouth": 11,
+        "brows": 1
+      },
+      "flustered": {
+        "eyes": 7,
+        "mouth": 11,
+        "brows": 1
+      },
+      "unimpressed": {
+        "eyes": 10,
+        "mouth": 0,
+        "brows": 2
+      }
+    }
+  },
+  "source": "Local game assets assembled by UmaViewer; sampled at 30 fps",
+  "display_name": "Nishino Flower — Layered Petals",
+  "metadata_version": 2,
+  "physics_version": "f7079dfaa644633a57d13ce9c6c5d9066b9dc4f10b048156aef89cb246205a84"
+}
