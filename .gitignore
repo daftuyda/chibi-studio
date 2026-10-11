@@ -15,6 +15,7 @@ obj/
 *.exe
 *.zip
 *.gif
+!/web/social/*.gif
 Config.json
 .env
 .env.*
