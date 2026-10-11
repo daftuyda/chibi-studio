@@ -21,6 +21,12 @@ API server. Models and browser assets have content hashes in their URLs so
 they can be cached until their content changes. HTML and the catalog should
 be revalidated on each visit.
 
+The build also writes precompressed `.glb.gz` copies beside the models. The
+included Nginx configuration serves these when the browser accepts gzip,
+reducing downloads without changing the model URLs or decoded files. Other
+static hosts can serve the original GLBs, or enable the equivalent gzip
+support. Nginx needs its `http_gzip_static_module` for the supplied snippet.
+
 ## Nginx on a VPS
 
 The files under `deploy/` use this layout:

@@ -1,5 +1,6 @@
 """Build Chibi Studio for static hosting. Python 3.10+, no packages."""
 import argparse
+import gzip
 import hashlib
 import json
 import shutil
@@ -70,6 +71,12 @@ def build_site(output, models=None, web=None):
         target = output / relative
         target.parent.mkdir(parents=True)
         shutil.copyfile(path, target)
+        # Serve a precompressed copy on hosts with gzip_static support. Browsers
+        # still request the GLB URL and transparently decode its response.
+        with path.open('rb') as source, target.with_suffix('.glb.gz').open('wb') as destination:
+            with gzip.GzipFile(filename='', mode='wb', compresslevel=3,
+                               fileobj=destination, mtime=0) as compressed:
+                shutil.copyfileobj(source, compressed)
         entry['model_url'] = '/' + relative.as_posix()
         catalog.append(entry)
     (output / 'api').mkdir()

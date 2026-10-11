@@ -81,6 +81,42 @@ def test_changed_motion_asset_invalidates_resume_profile(tmp_path):
     assert first[0]['import_profile'] != second[0]['import_profile']
 
 
+def test_jp_library_preserves_japanese_names_and_prefers_available_english(tmp_path):
+    source = row(name='ライスシャワー', outfit='[ライスの衣装]', card_id=103002)
+    translations = {'6': {'1030': 'Rice Shower'}, '5': {'103002': '[Vampire Makeover!]'}}
+    assets = example_assets() + [asset('3d/motion/mini/event/body/type00/anm_min_eve_type00_laugh21_loop')]
+    items, unavailable = plan_import([source], assets, tmp_path, 'jp', translations)
+    assert not unavailable
+    item = items[0]
+    assert item['id'] == 'jp-1030-40' and item['region'] == 'jp'
+    assert item['available_in'] == ['jp']
+    assert item['name'] == 'Rice Shower' and item['outfit'] == 'Vampire Makeover!'
+    assert item['name_jp'] == 'ライスシャワー' and item['outfit_jp'] == 'ライスの衣装'
+    assert item['output'] == str(tmp_path / 'jp-1030-40')
+    assert item['animation_labels']['anm_min_eve_type00_laugh21_loop'] == 'Laugh 21'
+    assert not any('chr1001' in motion for motion in item['motions'])
+    global_items, _ = plan_import([source], assets, tmp_path)
+    assert global_items[0]['id'] == '1030-40'
+    assert len(item['motions']) == len(global_items[0]['motions']) + 1
+
+
+def test_jp_translation_fallback_and_official_global_title(tmp_path):
+    source = row(name='ライスシャワー', outfit='[日本語の衣装]', card_id=103002)
+    items, _ = plan_import([source], example_assets(), tmp_path, 'jp')
+    assert items[0]['name'] == 'ライスシャワー' and items[0]['outfit'] == '日本語の衣装'
+    official = {(1030, '40'): {'name': 'Rice Shower', 'outfit': 'Vampire Makeover!'}}
+    items, _ = plan_import([source], example_assets(), tmp_path, 'jp',
+                           {'5': {'103002': '[Fan title]'}}, official)
+    assert items[0]['outfit'] == 'Vampire Makeover!'
+    assert items[0]['available_in'] == ['global', 'jp']
+    assert items[0]['outfit_jp'] == '日本語の衣装'
+    items, _ = plan_import([source], example_assets(), tmp_path, 'jp',
+                           {'14': {'103040': 'Signature Racewear'}})
+    assert items[0]['outfit'] == '日本語の衣装', 'Preserve the actual alt title instead of a generic dress label.'
+    items, missing = plan_import([row(have_mini=0)], example_assets(), tmp_path, 'jp')
+    assert not items and not missing
+
+
 def glb():
     metadata = json.dumps({'asset': {'version': '2.0'}, 'extras': {'retained': 'yes'}}).encode()
     metadata += b' ' * (-len(metadata) % 4)

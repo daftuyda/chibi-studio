@@ -24,9 +24,10 @@ step to start it.
 
 ## Make something
 
-- **Character and outfit:** browse 69 characters and 109 outfits, including
-  alternate outfit titles. Search the library or open your own GLB file.
-- **Motion and expression:** choose from 37–41 motions per outfit and 16
+- **Character and outfit:** switch between Global and JP beside the theme
+  button. Browse alternate outfit titles, search in English or Japanese,
+  or open your own GLB file. The GitHub button opens this repository.
+- **Motion and expression:** choose from 112–117 motions per outfit and 24
   expressions. Pause, scrub, change speed, match expressions to the motion,
   and enable natural blinking.
 - **Secondary motion:** add movement to sleeves, hair and clothing using the
@@ -48,25 +49,46 @@ images you open are processed in the browser and are not uploaded.
 
 ## Character library
 
-The library lives in **`models/`** inside this project and is about **1.1 GB**.
+The library lives in **`models/`** inside this project. Both views use the same
+JP models, animations and expressions. Global filters the library to characters
+and outfits released there; the JP button reveals the full collection:
+
+| Library | Characters | Outfits | Motions per outfit |
+| --- | ---: | ---: | ---: |
+| Global | 69 | 109 | 113–117 |
+| JP | 135 | 270 | 112–117 |
+
+JP names and outfit titles use English where available, retaining the original
+Japanese for search. Official Global names take precedence for shared outfits.
+Your selected view and the last outfit in each view are remembered. Each outfit
+has one model file shared by both views.
+
 Each outfit has its own folder:
 
 ```text
 models/
-  1030/
+  jp-1030/
     manifest.json    # Rice Shower — Rosy Dreams; names, motions and expressions
     model.glb        # Meshes, textures, rig, animations and embedded metadata
     physics.json     # Original cloth parameters used by the importer
-  1030-40/
+  jp-1030-40/
     ...              # Rice Shower — Vampire Makeover!
 ```
 
 The browser loads outfits on demand. The models are self-contained and do
 not need an installed copy of the game to view them.
 
+Global availability and official English names are recorded in
+`tools/chibi_export/global-outfits.json`. Each manifest's `available_in` field
+controls whether it appears in Global, JP or both. There is no separate set of
+older Global models.
+
 Model binaries are configured for [Git LFS](https://git-lfs.com/) in
 `.gitattributes`. When working from a Git clone, install Git LFS and fetch
-the model files before starting the viewer:
+the model files before starting the viewer. The complete library is several
+gigabytes; a browser visit only fetches the outfits you select.
+
+Fetch the library with:
 
 ```sh
 git lfs install
@@ -84,7 +106,7 @@ python viewer.py --models /path/to/models
 ```
 
 `CHIBI_MODELS_DIR` also sets the library path; `--models` takes precedence.
-For adding or refreshing models from an installed Global game, see
+For adding or refreshing models from an installed Global or JP game, see
 [Importing models](docs/importing-models.md).
 
 ## Server options
@@ -142,11 +164,13 @@ python tests/check_chibi_browser.py
 python tests/check_chibi_studio.py
 python tests/check_chibi_physics.py
 python tests/check_chibi_library.py
+python tests/check_chibi_regions.py
 ```
 
 Set `CHIBI_STUDIO_URL` to check a different address. Captures and reports go
 under `.local/`. The checks cover the character library, animation and face
 controls, GIF frames and transparency, cancellation, physics, and mobile use.
+Set `CHIBI_STUDIO_REGION=jp` to run the studio/GIF checks against the JP library.
 
 ```text
 viewer.py              HTTP server and character catalog
@@ -154,7 +178,7 @@ build_static.py        Build the public website for static hosting
 deploy/                Nginx configuration and release publisher
 web/                   Browser interface, renderer, physics and GIF encoder
 models/                Included character library
-tools/chibi_export/    Optional Global game importer
+tools/chibi_export/    Optional Global / JP game importer
 tests/                 Server, importer and browser checks
 .local/                Ignored tools, configuration, caches and test output
 ```
@@ -163,6 +187,11 @@ tests/                 Server, importer and browser checks
 
 - [UmaViewer](https://github.com/katboi01/UmaViewer) provides the model and
   animation loading used by the optional importer.
+- [UmaTL / Hachimi English translations](https://github.com/UmaTL/hachimi-tl-en)
+  supply English JP character names and outfit titles where an official Global
+  title is unavailable. Translations are credited to UmaTL and its contributors;
+  the original Japanese names are retained in the library. The browser does not
+  contact translation services.
 - [Three.js](https://github.com/mrdoob/three.js/tree/r180), version 0.180.0,
   renders the 3D characters and camera controls. Its
   [MIT license](web/vendor/three/LICENSE) is included with the library.

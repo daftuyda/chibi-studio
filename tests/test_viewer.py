@@ -42,11 +42,27 @@ def test_standalone_http_and_catalog(tmp_path):
         result = json.load(urlopen(url + '/api/chibi-models'))['models'][0]
         assert result['display_name'] == 'Rice Shower — Vampire Makeover!'
         assert result['animation_groups'] == {'run': 'Movement'}
+        assert result['region'] == 'global'
         assert urlopen(url + result['model_url']).read().startswith(b'glTF')
         assert b'Chibi Studio' in urlopen(url).read()
         response = urlopen(Request(url + '/assets/test.js', method='HEAD'))
         assert response.headers['Content-Type'] == 'text/javascript'
         assert response.read() == b''
+
+
+def test_shared_jp_model_is_available_in_both_filters_and_keeps_search_names(tmp_path):
+    with running(tmp_path) as (url, models):
+        add_model(models, region='jp', available_in=['global', 'jp'],
+                  name_jp='ライスシャワー', outfit_jp='ヴァンパイア')
+        entries = {entry['id']: entry for entry in json.load(urlopen(url + '/api/chibi-models'))['models']}
+        assert len(entries) == 1
+        jp = entries['1030-40']
+        assert jp['available_in'] == ['global', 'jp']
+        assert jp['region'] == 'jp' and jp['name_jp'] == 'ライスシャワー'
+        assert jp['outfit_jp'] == 'ヴァンパイア'
+        assert urlopen(url + jp['model_url']).read().startswith(b'glTF')
+        add_model(models, region='jp')
+        assert json.load(urlopen(url + '/api/chibi-models'))['models'][0]['available_in'] == ['jp']
 
 
 def test_server_loads_included_models_by_default(tmp_path, monkeypatch):

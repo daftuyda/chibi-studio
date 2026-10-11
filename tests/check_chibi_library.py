@@ -13,7 +13,11 @@ with sync_playwright() as playwright:
     browser = playwright.chromium.launch(channel='chrome', headless=True)
     context = browser.new_context(viewport={'width': 1440, 'height': 1100}, reduced_motion='reduce')
     catalog = context.request.get(URL + '/api/chibi-models').json()['models']
-    assert catalog, 'Import the Global racewear library first.'
+    assert catalog, 'Import a character library first.'
+    if selected := os.environ.get('CHIBI_STUDIO_MODEL_IDS'):
+        requested = set(selected.split(','))
+        catalog = [entry for entry in catalog if entry['id'] in requested]
+        assert {entry['id'] for entry in catalog} == requested, 'A requested outfit is unavailable.'
     page = context.new_page()
     errors, results = [], []
     page.on('pageerror', lambda error: errors.append(str(error)))
@@ -21,6 +25,10 @@ with sync_playwright() as playwright:
     page.goto(URL + '/chibi')
     page.wait_for_function("document.querySelector('#status').dataset.state === 'ready'")
     for index, entry in enumerate(catalog):
+        region = entry.get('region', 'global')
+        if page.locator('html').get_attribute('data-library-region') != region:
+            page.locator('#library-toggle').click()
+            page.wait_for_function("region => document.documentElement.dataset.libraryRegion === region && document.querySelector('#status').dataset.state === 'ready'", arg=region)
         key = str(entry.get('character_id') or entry['id'])
         if page.locator('#character').input_value() != key:
             page.locator('#character').select_option(key)

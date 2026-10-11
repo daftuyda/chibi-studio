@@ -34,13 +34,21 @@ def read_model(root, ident):
         with path.open('rb') as source:
             if source.read(4) != b'glTF':
                 return None
+        region = 'jp' if data.get('region') == 'jp' else 'global'
+        available_in = data.get('available_in')
+        if not isinstance(available_in, list):
+            available_in = [region]
         entry = {
             'id': ident,
+            'region': region,
+            'available_in': [value for value in ('global', 'jp') if value in available_in],
             'character_id': data.get('character_id') if isinstance(data.get('character_id'), int) else None,
             'costume': str(data.get('costume') or '00')[:20],
             'dress_id': data.get('dress_id') if isinstance(data.get('dress_id'), int) else None,
             'name': str(data.get('name') or ident)[:120],
             'outfit': str(data.get('outfit') or 'Local outfit')[:120],
+            'name_jp': str(data.get('name_jp') or '')[:120],
+            'outfit_jp': str(data.get('outfit_jp') or '')[:120],
             'model_url': f'/chibi-models/{ident}/model.glb',
             'bytes': path.stat().st_size,
             'animation_labels': data.get('animation_labels') if isinstance(data.get('animation_labels'), dict) else {},

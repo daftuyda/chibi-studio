@@ -1,0 +1,659 @@
+{
+  "source": "Installed Global game roster, 2026-10-12",
+  "outfits": {
+    "1001": {
+      "character_id": 1001,
+      "costume": "00",
+      "name": "Special Week",
+      "outfit": "Special Dreamer"
+    },
+    "1001-02": {
+      "character_id": 1001,
+      "costume": "02",
+      "name": "Special Week",
+      "outfit": "Ruler of Japan"
+    },
+    "1001-30": {
+      "character_id": 1001,
+      "costume": "30",
+      "name": "Special Week",
+      "outfit": "Hopp'n♪Happy Heart"
+    },
+    "1002": {
+      "character_id": 1002,
+      "costume": "00",
+      "name": "Silence Suzuka",
+      "outfit": "Innocent Silence"
+    },
+    "1003": {
+      "character_id": 1003,
+      "costume": "00",
+      "name": "Tokai Teio",
+      "outfit": "Peak Joy"
+    },
+    "1003-02": {
+      "character_id": 1003,
+      "costume": "02",
+      "name": "Tokai Teio",
+      "outfit": "Beyond the Horizon"
+    },
+    "1004": {
+      "character_id": 1004,
+      "costume": "00",
+      "name": "Maruzensky",
+      "outfit": "Formula R"
+    },
+    "1004-30": {
+      "character_id": 1004,
+      "costume": "30",
+      "name": "Maruzensky",
+      "outfit": "Hot☆Summer Night"
+    },
+    "1005": {
+      "character_id": 1005,
+      "costume": "00",
+      "name": "Fuji Kiseki",
+      "outfit": "Shooting Star Revue"
+    },
+    "1005-20": {
+      "character_id": 1005,
+      "costume": "20",
+      "name": "Fuji Kiseki",
+      "outfit": "Succès Étoilé"
+    },
+    "1006": {
+      "character_id": 1006,
+      "costume": "00",
+      "name": "Oguri Cap",
+      "outfit": "Starlight Beat"
+    },
+    "1006-46": {
+      "character_id": 1006,
+      "costume": "46",
+      "name": "Oguri Cap",
+      "outfit": "Ashen Miracle"
+    },
+    "1007": {
+      "character_id": 1007,
+      "costume": "00",
+      "name": "Gold Ship",
+      "outfit": "Red Strife"
+    },
+    "1007-30": {
+      "character_id": 1007,
+      "costume": "30",
+      "name": "Gold Ship",
+      "outfit": "RUN! RUIN! LAUNCHER!"
+    },
+    "1008": {
+      "character_id": 1008,
+      "costume": "00",
+      "name": "Vodka",
+      "outfit": "Wild Top Gear"
+    },
+    "1008-46": {
+      "character_id": 1008,
+      "costume": "46",
+      "name": "Vodka",
+      "outfit": "Fiery Aqua Vitae"
+    },
+    "1009": {
+      "character_id": 1009,
+      "costume": "00",
+      "name": "Daiwa Scarlet",
+      "outfit": "Peak Blue"
+    },
+    "1009-46": {
+      "character_id": 1009,
+      "costume": "46",
+      "name": "Daiwa Scarlet",
+      "outfit": "Nuit Étoilée de Scarlet"
+    },
+    "1010": {
+      "character_id": 1010,
+      "costume": "00",
+      "name": "Taiki Shuttle",
+      "outfit": "Wild Frontier"
+    },
+    "1010-23": {
+      "character_id": 1010,
+      "costume": "23",
+      "name": "Taiki Shuttle",
+      "outfit": "Bubblegum☆Memories"
+    },
+    "1011": {
+      "character_id": 1011,
+      "costume": "00",
+      "name": "Grass Wonder",
+      "outfit": "Stone-Piercing Blue"
+    },
+    "1011-16": {
+      "character_id": 1011,
+      "costume": "16",
+      "name": "Grass Wonder",
+      "outfit": "Saintly Jade Cleric"
+    },
+    "1012-01": {
+      "character_id": 1012,
+      "costume": "01",
+      "name": "Hishi Amazon",
+      "outfit": "Azure Amazon"
+    },
+    "1013": {
+      "character_id": 1013,
+      "costume": "00",
+      "name": "Mejiro McQueen",
+      "outfit": "Frontline Elegance"
+    },
+    "1013-02": {
+      "character_id": 1013,
+      "costume": "02",
+      "name": "Mejiro McQueen",
+      "outfit": "End of the Skies"
+    },
+    "1013-30": {
+      "character_id": 1013,
+      "costume": "30",
+      "name": "Mejiro McQueen",
+      "outfit": "Fair Lady of the Waves"
+    },
+    "1014": {
+      "character_id": 1014,
+      "costume": "00",
+      "name": "El Condor Pasa",
+      "outfit": "El☆Número 1"
+    },
+    "1014-16": {
+      "character_id": 1014,
+      "costume": "16",
+      "name": "El Condor Pasa",
+      "outfit": "Kukulkan Warrior"
+    },
+    "1015": {
+      "character_id": 1015,
+      "costume": "00",
+      "name": "T.M. Opera O",
+      "outfit": "O Sole Suo!"
+    },
+    "1015-10": {
+      "character_id": 1015,
+      "costume": "10",
+      "name": "T.M. Opera O",
+      "outfit": "New Year, Same Radiance!"
+    },
+    "1016": {
+      "character_id": 1016,
+      "costume": "00",
+      "name": "Narita Brian",
+      "outfit": "Maverick"
+    },
+    "1016-02": {
+      "character_id": 1016,
+      "costume": "02",
+      "name": "Narita Brian",
+      "outfit": "Ravenous Wolf"
+    },
+    "1017": {
+      "character_id": 1017,
+      "costume": "00",
+      "name": "Symboli Rudolf",
+      "outfit": "Emperor's Path"
+    },
+    "1017-43": {
+      "character_id": 1017,
+      "costume": "43",
+      "name": "Symboli Rudolf",
+      "outfit": "Archer by Moonlight"
+    },
+    "1018": {
+      "character_id": 1018,
+      "costume": "00",
+      "name": "Air Groove",
+      "outfit": "Empress Road"
+    },
+    "1018-26": {
+      "character_id": 1018,
+      "costume": "26",
+      "name": "Air Groove",
+      "outfit": "Quercus Civilis"
+    },
+    "1019-01": {
+      "character_id": 1019,
+      "costume": "01",
+      "name": "Agnes Digital",
+      "outfit": "Full-Color Fangirling"
+    },
+    "1019-40": {
+      "character_id": 1019,
+      "costume": "40",
+      "name": "Agnes Digital",
+      "outfit": "Fanatic♡Jiangshi"
+    },
+    "1020": {
+      "character_id": 1020,
+      "costume": "00",
+      "name": "Seiun Sky",
+      "outfit": "Reeling in the Big One"
+    },
+    "1020-20": {
+      "character_id": 1020,
+      "costume": "20",
+      "name": "Seiun Sky",
+      "outfit": "Soirée des Chatons"
+    },
+    "1021": {
+      "character_id": 1021,
+      "costume": "00",
+      "name": "Tamamo Cross",
+      "outfit": "Fast as Lightning"
+    },
+    "1021-43": {
+      "character_id": 1021,
+      "costume": "43",
+      "name": "Tamamo Cross",
+      "outfit": "Raging Thunder"
+    },
+    "1022": {
+      "character_id": 1022,
+      "costume": "00",
+      "name": "Fine Motion",
+      "outfit": "Noble Seamair"
+    },
+    "1022-26": {
+      "character_id": 1022,
+      "costume": "26",
+      "name": "Fine Motion",
+      "outfit": "Titania"
+    },
+    "1023": {
+      "character_id": 1023,
+      "costume": "00",
+      "name": "Biwa Hayahide",
+      "outfit": "pf. Winning Equation..."
+    },
+    "1023-46": {
+      "character_id": 1023,
+      "costume": "46",
+      "name": "Biwa Hayahide",
+      "outfit": "Rouge Caroler"
+    },
+    "1024": {
+      "character_id": 1024,
+      "costume": "00",
+      "name": "Mayano Top Gun",
+      "outfit": "Scramble☆Zone"
+    },
+    "1024-26": {
+      "character_id": 1024,
+      "costume": "26",
+      "name": "Mayano Top Gun",
+      "outfit": "Sunlight Bouquet"
+    },
+    "1025": {
+      "character_id": 1025,
+      "costume": "00",
+      "name": "Manhattan Cafe",
+      "outfit": "Creeping Shadow"
+    },
+    "1026": {
+      "character_id": 1026,
+      "costume": "00",
+      "name": "Mihono Bourbon",
+      "outfit": "MB-19890425"
+    },
+    "1026-13": {
+      "character_id": 1026,
+      "costume": "13",
+      "name": "Mihono Bourbon",
+      "outfit": "CODE: ICING"
+    },
+    "1027": {
+      "character_id": 1027,
+      "costume": "00",
+      "name": "Mejiro Ryan",
+      "outfit": "Down the Line"
+    },
+    "1028-01": {
+      "character_id": 1028,
+      "costume": "01",
+      "name": "Hishi Akebono",
+      "outfit": "Buono ☆ Alla Moda"
+    },
+    "1029-01": {
+      "character_id": 1029,
+      "costume": "01",
+      "name": "Yukino Bijin",
+      "outfit": "Darl'n Snowflake"
+    },
+    "1030": {
+      "character_id": 1030,
+      "costume": "00",
+      "name": "Rice Shower",
+      "outfit": "Rosy Dreams"
+    },
+    "1030-40": {
+      "character_id": 1030,
+      "costume": "40",
+      "name": "Rice Shower",
+      "outfit": "Vampire Makeover!"
+    },
+    "1031": {
+      "character_id": 1031,
+      "costume": "00",
+      "name": "Ines Fujin",
+      "outfit": "Always Electrifying"
+    },
+    "1032": {
+      "character_id": 1032,
+      "costume": "00",
+      "name": "Agnes Tachyon",
+      "outfit": "tach-nology"
+    },
+    "1033": {
+      "character_id": 1033,
+      "costume": "00",
+      "name": "Admire Vega",
+      "outfit": "Starry Nocturne"
+    },
+    "1034": {
+      "character_id": 1034,
+      "costume": "00",
+      "name": "Inari One",
+      "outfit": "Edomurasaki"
+    },
+    "1034-43": {
+      "character_id": 1034,
+      "costume": "43",
+      "name": "Inari One",
+      "outfit": "Golden Dream"
+    },
+    "1035": {
+      "character_id": 1035,
+      "costume": "00",
+      "name": "Winning Ticket",
+      "outfit": "Get to Winning!"
+    },
+    "1035-16": {
+      "character_id": 1035,
+      "costume": "16",
+      "name": "Winning Ticket",
+      "outfit": "Dream Deliverer"
+    },
+    "1036": {
+      "character_id": 1036,
+      "costume": "00",
+      "name": "Air Shakur",
+      "outfit": "unsigned"
+    },
+    "1037": {
+      "character_id": 1037,
+      "costume": "00",
+      "name": "Eishin Flash",
+      "outfit": "Meisterschaft"
+    },
+    "1037-13": {
+      "character_id": 1037,
+      "costume": "13",
+      "name": "Eishin Flash",
+      "outfit": "Precise Chocolatier"
+    },
+    "1038": {
+      "character_id": 1038,
+      "costume": "00",
+      "name": "Curren Chan",
+      "outfit": "Fille Éclair"
+    },
+    "1038-26": {
+      "character_id": 1038,
+      "costume": "26",
+      "name": "Curren Chan",
+      "outfit": "Ma Chérie of the New Moon"
+    },
+    "1039": {
+      "character_id": 1039,
+      "costume": "00",
+      "name": "Kawakami Princess",
+      "outfit": "Princess of Pink"
+    },
+    "1040": {
+      "character_id": 1040,
+      "costume": "00",
+      "name": "Gold City",
+      "outfit": "Authentic / 1928"
+    },
+    "1040-43": {
+      "character_id": 1040,
+      "costume": "43",
+      "name": "Gold City",
+      "outfit": "Autumn Cosmos"
+    },
+    "1041": {
+      "character_id": 1041,
+      "costume": "00",
+      "name": "Sakura Bakushin O",
+      "outfit": "Blossom in Learning"
+    },
+    "1042": {
+      "character_id": 1042,
+      "costume": "00",
+      "name": "Seeking the Pearl",
+      "outfit": "Rocket☆Star"
+    },
+    "1044": {
+      "character_id": 1044,
+      "costume": "00",
+      "name": "Sweep Tosho",
+      "outfit": "Platanus Witch"
+    },
+    "1045": {
+      "character_id": 1045,
+      "costume": "00",
+      "name": "Super Creek",
+      "outfit": "Murmuring Stream"
+    },
+    "1045-40": {
+      "character_id": 1045,
+      "costume": "40",
+      "name": "Super Creek",
+      "outfit": "Chiffon-Wrapped Mummy"
+    },
+    "1046-01": {
+      "character_id": 1046,
+      "costume": "01",
+      "name": "Smart Falcon",
+      "outfit": "LOVE☆4EVER"
+    },
+    "1046-02": {
+      "character_id": 1046,
+      "costume": "02",
+      "name": "Smart Falcon",
+      "outfit": "Twilight Triumph"
+    },
+    "1047-01": {
+      "character_id": 1047,
+      "costume": "01",
+      "name": "Zenno Rob Roy",
+      "outfit": "Heroic Author"
+    },
+    "1048": {
+      "character_id": 1048,
+      "costume": "00",
+      "name": "Tosen Jordan",
+      "outfit": "Jokester ☆ Vibes"
+    },
+    "1049": {
+      "character_id": 1049,
+      "costume": "00",
+      "name": "Nakayama Festa",
+      "outfit": "Desperate Measures"
+    },
+    "1050": {
+      "character_id": 1050,
+      "costume": "00",
+      "name": "Narita Taishin",
+      "outfit": "Nevertheless"
+    },
+    "1050-16": {
+      "character_id": 1050,
+      "costume": "16",
+      "name": "Narita Taishin",
+      "outfit": "Difference Engineer"
+    },
+    "1051": {
+      "character_id": 1051,
+      "costume": "00",
+      "name": "Nishino Flower",
+      "outfit": "Layered Petals"
+    },
+    "1052": {
+      "character_id": 1052,
+      "costume": "00",
+      "name": "Haru Urara",
+      "outfit": "Bestest Prize ♪"
+    },
+    "1052-10": {
+      "character_id": 1052,
+      "costume": "10",
+      "name": "Haru Urara",
+      "outfit": "New Year ♪ New Urara!"
+    },
+    "1053-01": {
+      "character_id": 1053,
+      "costume": "01",
+      "name": "Bamboo Memory",
+      "outfit": "Iron Ambition"
+    },
+    "1056": {
+      "character_id": 1056,
+      "costume": "00",
+      "name": "Matikanefukukitaru",
+      "outfit": "Rising☆Fortune"
+    },
+    "1056-23": {
+      "character_id": 1056,
+      "costume": "23",
+      "name": "Matikanefukukitaru",
+      "outfit": "Lucky Tidings"
+    },
+    "1058": {
+      "character_id": 1058,
+      "costume": "00",
+      "name": "Meisho Doto",
+      "outfit": "Turbulent Blue"
+    },
+    "1058-40": {
+      "character_id": 1058,
+      "costume": "40",
+      "name": "Meisho Doto",
+      "outfit": "Dot-o'-Lantern"
+    },
+    "1059": {
+      "character_id": 1059,
+      "costume": "00",
+      "name": "Mejiro Dober",
+      "outfit": "Off the Line"
+    },
+    "1059-23": {
+      "character_id": 1059,
+      "costume": "23",
+      "name": "Mejiro Dober",
+      "outfit": "Sapphire Sojourn"
+    },
+    "1060": {
+      "character_id": 1060,
+      "costume": "00",
+      "name": "Nice Nature",
+      "outfit": "Poinsettia Ribbon"
+    },
+    "1060-50": {
+      "character_id": 1060,
+      "costume": "50",
+      "name": "Nice Nature",
+      "outfit": "Run & Win"
+    },
+    "1061": {
+      "character_id": 1061,
+      "costume": "00",
+      "name": "King Halo",
+      "outfit": "King of Emeralds"
+    },
+    "1061-50": {
+      "character_id": 1061,
+      "costume": "50",
+      "name": "King Halo",
+      "outfit": "Cheerleader in Noble White"
+    },
+    "1062": {
+      "character_id": 1062,
+      "costume": "00",
+      "name": "Matikanetannhauser",
+      "outfit": "Clippety-Tippety-Clop"
+    },
+    "1064": {
+      "character_id": 1064,
+      "costume": "00",
+      "name": "Mejiro Palmer",
+      "outfit": "Line Breakthrough"
+    },
+    "1067": {
+      "character_id": 1067,
+      "costume": "00",
+      "name": "Satono Diamond",
+      "outfit": "Natural Brilliance"
+    },
+    "1068": {
+      "character_id": 1068,
+      "costume": "00",
+      "name": "Kitasan Black",
+      "outfit": "Gilded Shrine to Glory"
+    },
+    "1069": {
+      "character_id": 1069,
+      "costume": "00",
+      "name": "Sakura Chiyono O",
+      "outfit": "Strength in Full Bloom"
+    },
+    "1071": {
+      "character_id": 1071,
+      "costume": "00",
+      "name": "Mejiro Ardan",
+      "outfit": "Crystalline"
+    },
+    "1072": {
+      "character_id": 1072,
+      "costume": "00",
+      "name": "Yaeno Muteki",
+      "outfit": "Blazed Head, Covered Fists"
+    },
+    "1074": {
+      "character_id": 1074,
+      "costume": "00",
+      "name": "Mejiro Bright",
+      "outfit": "Brunissage Line"
+    },
+    "1078": {
+      "character_id": 1078,
+      "costume": "00",
+      "name": "Yamanin Zephyr",
+      "outfit": "Fluttertail Spirit"
+    },
+    "1087": {
+      "character_id": 1087,
+      "costume": "00",
+      "name": "Aston Machan",
+      "outfit": "Flare"
+    },
+    "1098": {
+      "character_id": 1098,
+      "costume": "00",
+      "name": "Copano Rickey",
+      "outfit": "Eightfold☆Fortune"
+    },
+    "1100": {
+      "character_id": 1100,
+      "costume": "00",
+      "name": "Wonder Acute",
+      "outfit": "Butterfly Sting"
+    }
+  }
+}

@@ -1,7 +1,8 @@
-"""Plan the Global racewear import from the installed master and local asset index."""
+"""Plan Global or JP chibi imports from an installed master and local asset index."""
 import argparse
 import hashlib
 import json
+import re
 import sqlite3
 import time
 from pathlib import Path
@@ -44,15 +45,29 @@ def racewear(master, now):
         ''', (now, now, now))]
 
 
-def plan_import(rows, assets, model_root):
+def plan_import(rows, assets, model_root, region='global', translations=None, global_names=None):
+    if region not in ('global', 'jp'):
+        raise ValueError('Choose the global or jp library.')
     index = {asset['name']: asset for asset in assets}
     items, unavailable, seen = [], [], set()
+    translations, global_names = translations or {}, global_names or {}
+    global_character_names = {key[0]: value['name'] for key, value in global_names.items() if value.get('name')}
+
+    def translated(category, ident, fallback):
+        value = translations.get(str(category), {}).get(str(ident))
+        return ' '.join(value.split()) if isinstance(value, str) and value.strip() else fallback
+
+    def title_text(value):
+        value = ' '.join(value.split())
+        return value[1:-1] if value.startswith('[') and value.endswith(']') else value
 
     def complete(path):
         entry = index.get(path)
         return entry and entry['present'] and not entry.get('missing_dependencies')
 
     for row in rows:
+        if region == 'jp' and not row['have_mini']:
+            continue
         chara = row['character_id']
         costume = f"{row['body_type_sub']:02d}"
         # Multiple database entries can refer to the same physical chibi costume.
@@ -60,12 +75,22 @@ def plan_import(rows, assets, model_root):
             continue
         seen.add((chara, costume))
         model_id = str(chara) if costume == '00' else f'{chara}-{costume}'
-        title = row['outfit'] or f'Racing outfit {costume}'
-        if title.startswith('[') and title.endswith(']'):
-            title = title[1:-1]
+        original_name = row['name'] or f'Character {chara}'
+        original_title = title_text(row['outfit'] or f'Racing outfit {costume}')
+        name, title = original_name, original_title
+        if region == 'jp':
+            known = global_names.get((chara, costume), {})
+            name = global_character_names.get(chara) or translated(6, chara, original_name)
+            # A generic translated dress label must not replace an untranslated card title.
+            translated_title = translated(5, row['card_id'], original_title) if row.get('card_id') else translated(14, row['dress_id'], original_title)
+            title = known.get('outfit') or title_text(translated_title)
+            model_id = 'jp-' + model_id
         item = {'id': model_id, 'character_id': chara, 'dress_id': row['dress_id'], 'costume': costume,
-                'name': row['name'] or f'Character {chara}', 'outfit': title,
+                'region': region, 'name': name, 'outfit': title,
                 'output': str((model_root / model_id).resolve())}
+        if region == 'jp':
+            item.update(name_jp=original_name, outfit_jp=original_title)
+        item['available_in'] = ['global', 'jp'] if region == 'jp' and (chara, costume) in global_names else [region]
         head = f'3d/chara/mini/head/mchr{chara}_{costume}'
         if f'{head}/pfb_mchr{chara}_{costume}_hair' not in index:
             head = f'3d/chara/mini/head/mchr{chara}_00'
@@ -85,7 +110,7 @@ def plan_import(rows, assets, model_root):
         item['physics_assets'] = [path for path in physics if complete(path)]
         missing = [name for name in required if not complete(name)]
         if missing:
-            unavailable.append({**item, 'reason': 'Chibi assets are missing from the local Global cache', 'missing': missing})
+            unavailable.append({**item, 'reason': f'Chibi assets are missing from the local {region} cache', 'missing': missing})
             continue
 
         motions, labels, groups = [], {}, {}
@@ -100,6 +125,29 @@ def plan_import(rows, assets, model_root):
         add(f'{character_prefix}00/anm_min_eve_chr{chara}_00_idle01_loop', 'Idle', 'Character')
         for suffix, label, group in COMMON_MOTIONS:
             add(f'3d/motion/mini/event/body/type00/anm_min_eve_type00_{suffix}_loop', label, group)
+        if region == 'jp':
+            # Standalone body loops do not include the game's scene props or cameras.
+            names = {'akire': 'Exasperated', 'bit': 'Nervous', 'book': 'Read', 'bookshelf': 'Browse books',
+                     'byebye': 'Wave goodbye', 'chair': 'Sit', 'chuni': 'Dramatic pose', 'drinkcupa': 'Drink',
+                     'fight': 'Fighting spirit', 'gatts': 'Determined', 'good': 'Thumbs up',
+                     'homestand': 'Standing pose', 'hope': 'Hopeful', 'hungry': 'Hungry', 'idea': 'An idea',
+                     'ikaku': 'Intimidate', 'joy': 'Celebrate', 'kuchiate': 'Hand to mouth', 'laugh': 'Laugh',
+                     'muneate': 'Hand on heart', 'music': 'Music', 'near': 'Lean closer', 'oh': 'Oh!',
+                     'peace': 'Peace sign', 'pose': 'Pose', 'present': 'Give a present', 'request': 'Please!',
+                     'run': 'Run', 'see': 'Look around', 'showtime': 'Showtime', 'shy': 'Shy',
+                     'soppo': 'Look away', 'start': 'Ready to go', 'sudachi': 'Standing pose',
+                     'surprise': 'Surprised', 'tired': 'Tired', 'topin': 'Jump in', 'udekumi': 'Arms crossed', 'smt': 'Story pose',
+                     'walk': 'Walk'}
+            for path in sorted(index):
+                match = re.fullmatch(r'3d/motion/mini/event/body/type00/anm_min_eve_type00_(.+)_loop', path)
+                if not match:
+                    continue
+                suffix = match[1]
+                stem = re.match(r'[a-z]+', suffix)[0]
+                label = names.get(stem, stem.capitalize()) + ' ' + suffix[len(stem):].replace('_', ' ')
+                group = 'Movement' if stem in {'run', 'walk', 'topin'} else 'Activities' if stem in {
+                    'book', 'bookshelf', 'chair', 'drinkcupa', 'music', 'present'} else 'Reactions'
+                add(path, label.strip(), group)
         # Original character-specific looping poses, for this outfit or the base outfit.
         for path in sorted(index):
             if path.startswith(character_prefix) and path.endswith('_loop') and any(
@@ -109,7 +157,7 @@ def plan_import(rows, assets, model_root):
         if not motions:
             unavailable.append({**item, 'reason': 'No compatible local mini animations', 'missing': []})
             continue
-        signature = {'profile': PROFILE, 'models': [(name, index[name]['revision']) for name in required],
+        signature = {'profile': PROFILE if region == 'global' else 'jp-racewear-1', 'models': [(name, index[name]['revision']) for name in required],
                      'motions': [(name, index[name]['revision']) for name in motions]}
         item.update(motions=motions, animation_labels=labels, animation_groups=groups,
                     import_profile=hashlib.sha256(json.dumps(signature, sort_keys=True).encode()).hexdigest())
@@ -123,13 +171,28 @@ def main():
     parser.add_argument('--inventory', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--models', type=Path, required=True)
+    parser.add_argument('--region', choices=('global', 'jp'), default='global')
+    parser.add_argument('--translations', type=Path, help='Optional UmaTL text_data_dict.json for English JP names')
+    parser.add_argument('--global-master', type=Path, help='Optional Global master.mdb to refresh availability and official names')
+    parser.add_argument('--global-roster', type=Path, default=Path(__file__).with_name('global-outfits.json'))
     parser.add_argument('--force', action='store_true')
     args = parser.parse_args()
     assets = json.loads(args.inventory.read_text(encoding='utf-8'))['assets']
     rows = racewear(args.master, int(time.time()))
-    items, unavailable = plan_import(rows, assets, args.models)
+    translations = json.loads(args.translations.read_text(encoding='utf-8')) if args.translations else {}
+    global_names = {}
+    if args.region == 'jp':
+        if args.global_master:
+            for row in racewear(args.global_master, int(time.time())):
+                title = ' '.join((row['outfit'] or '').split()).strip('[]')
+                global_names.setdefault((row['character_id'], f"{row['body_type_sub']:02d}"),
+                                        {'name': row['name'], 'outfit': title})
+        else:
+            roster = json.loads(args.global_roster.read_text(encoding='utf-8'))['outfits']
+            global_names = {(item['character_id'], item['costume']): item for item in roster.values()}
+    items, unavailable = plan_import(rows, assets, args.models, args.region, translations, global_names)
     request = {'mode': 'batch', 'output': str(args.output.parent.resolve()), 'items': items,
-               'unavailable': unavailable, 'force': args.force, 'source': 'Installed Global master and asset cache'}
+               'unavailable': unavailable, 'force': args.force, 'source': f'Installed {args.region} master and asset cache'}
     args.output.write_text(json.dumps(request, ensure_ascii=False, indent=2), encoding='utf-8')
     count = len({item['character_id'] for item in items})
     print(f"Ready to import {len(items)} racing outfits for {count} characters; {len(unavailable)} unavailable locally.")

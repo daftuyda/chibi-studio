@@ -1,3 +1,4 @@
+import gzip
 import json
 
 import pytest
@@ -34,12 +35,15 @@ def test_static_build_preserves_catalog_and_publishes_only_runtime_files(tmp_pat
     assert entry['animation_labels'] == {'run': 'Run'}
     assert entry['faces']['presets'] == {'happy': {}}
     assert (output / entry['model_url'].lstrip('/')).read_bytes() == b'glTF' + bytes(20)
+    compressed = output / (entry['model_url'].lstrip('/') + '.gz')
+    assert gzip.decompress(compressed.read_bytes()) == b'glTF' + bytes(20)
     assert (output / 'index.html').read_bytes() == (output / 'chibi/index.html').read_bytes()
     main_url = (output / 'index.html').read_text().split('src="')[1].split('"')[0]
     main_path = output / main_url.lstrip('/')
     assert main_path.is_file() and main_path.with_name('worker.js').is_file()
     assert {path.name for path in output.rglob('*') if path.is_file()} == {
         'index.html', 'chibi-models', 'main.js', 'worker.js', entry['model_url'].split('/')[-1],
+        compressed.name,
     }
 
 

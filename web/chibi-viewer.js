@@ -7,7 +7,11 @@ import { createStudioLogo } from './studio-logo.js';
 const $ = selector => document.querySelector(selector);
 const viewport = $('#viewport');
 const logo = createStudioLogo($('#studio-logo'));
-let scene, models = [], characters = [], loadToken = 0, currentEntry = null, pendingFetch = null;
+let scene, library = [], models = [], characters = [], loadToken = 0, currentEntry = null, pendingFetch = null;
+let libraryRegion = 'global', refreshing = false;
+try { if (localStorage.getItem('chibi-studio-region') === 'jp') libraryRegion = 'jp'; } catch { }
+const selectionKey = region => region === 'jp' ? 'chibi-studio-model-jp' : 'chibi-studio-model';
+const inLibrary = (entry, region) => (entry.available_in || [entry.region || 'global']).includes(region);
 const maxBytes = 80 * 1024 * 1024;
 
 function status(text, state = '') { $('#status').textContent = text; $('#status').dataset.state = state; }
@@ -18,7 +22,7 @@ function displayName(entry) { return entry.display_name || (entry.id && entry.ou
 function searchable(text) { return text.normalize('NFKD').replace(/\p{Diacritic}/gu, '').toLocaleLowerCase(); }
 function showCharacters() {
   const query = searchable($('#character-search').value.trim());
-  const matches = characters.filter(character => searchable(`${character.name} ${character.id} ${character.outfits.map(entry => entry.outfit).join(' ')}`).includes(query));
+  const matches = characters.filter(character => searchable(`${character.name} ${character.id} ${character.outfits.map(entry => `${entry.name_jp || ''} ${entry.outfit} ${entry.outfit_jp || ''}`).join(' ')}`).includes(query));
   options($('#character'), matches.length ? matches.map(character => [character.id, character.name]) : [['', 'No matching characters']]);
   $('#character').disabled = !matches.length;
   const currentId = currentEntry ? characterKey(currentEntry) : '';
@@ -65,8 +69,10 @@ function chooseExpression(name, manual = false) {
 function matchExpression() {
   if (!$('#match-expression').checked) return;
   const name = scene.clips[scene.clipIndex]?.name || '';
-  const expression = /shy/.test(name) ? 'shy' : /gatts|run/.test(name) ? 'determined' : /hungry/.test(name) ? 'sad' :
-    /idea|hope/.test(name) ? 'excited' : /soppo|udekumi/.test(name) ? 'unimpressed' : /dance|joy|happy|yell/.test(name) ? 'happy' :
+  const expression = /tired/.test(name) ? 'tired' : /laugh/.test(name) ? 'laughing' : /ikaku/.test(name) ? 'angry' :
+    /surprise|_oh\d/.test(name) ? 'surprised' : /request/.test(name) ? 'worried' : /shy|_bit\d/.test(name) ? 'shy' :
+    /gatts|fight|run/.test(name) ? 'determined' : /hungry/.test(name) ? 'drooling' :
+    /idea|hope|good/.test(name) ? 'excited' : /akire|soppo|udekumi/.test(name) ? 'unimpressed' : /dance|joy|happy|yell|music/.test(name) ? 'happy' :
     /hello|bow|clap|come|skip/.test(name) ? 'smile' : 'neutral';
   chooseExpression(expression);
 }
@@ -171,7 +177,7 @@ async function loadModel(entry, file) {
     viewport.dataset.loaded = 'true';
     viewport.dataset.model = entry.id || '';
     viewport.dataset.animations = String(stats.animations);
-    if (entry.id) { try { localStorage.setItem('chibi-studio-model', entry.id); } catch { } }
+    if (entry.id) { try { localStorage.setItem(selectionKey(libraryRegion), entry.id); } catch { } }
     syncPlayback();
     status('Ready', 'ready');
   } catch (err) {
@@ -183,36 +189,70 @@ async function loadModel(entry, file) {
   }
 }
 
+function syncLibraryButton() {
+  const button = $('#library-toggle');
+  const next = libraryRegion === 'jp' ? 'Global' : 'JP';
+  button.title = `Switch to the ${next} library`;
+  button.setAttribute('aria-label', button.title);
+  button.setAttribute('aria-pressed', String(libraryRegion === 'jp'));
+  $('#library-region-label').textContent = libraryRegion === 'jp' ? 'JP' : 'Global';
+  button.disabled = refreshing || !library.some(entry => inLibrary(entry, libraryRegion === 'jp' ? 'global' : 'jp'));
+  document.documentElement.dataset.libraryRegion = libraryRegion;
+}
+
+async function showLibrary(switching = false) {
+  models = library.filter(entry => inLibrary(entry, libraryRegion));
+  syncLibraryButton();
+  const grouped = new Map();
+  models.forEach(entry => {
+    const key = characterKey(entry);
+    if (!grouped.has(key)) grouped.set(key, {id: key, name: entry.name, outfits: []});
+    grouped.get(key).outfits.push(entry);
+  });
+  characters = [...grouped.values()].sort((a, b) => a.name.localeCompare(b.name));
+  characters.forEach(character => character.outfits.sort((a, b) => (a.costume || '').localeCompare(b.costume || '')));
+  $('#library-count').textContent = `${libraryRegion === 'jp' ? 'JP' : 'Global'} · ${characters.length} character${characters.length === 1 ? '' : 's'} · ${models.length} outfit${models.length === 1 ? '' : 's'}`;
+  showCharacters();
+  let savedId;
+  try { savedId = localStorage.getItem(selectionKey(libraryRegion)); } catch { }
+  const preferredId = switching ? savedId : (currentEntry?.id || savedId);
+  // Preserve selections saved before the studio adopted the shared JP models.
+  const selected = models.find(entry => entry.id === preferredId || entry.id === `jp-${preferredId}`) ||
+    (switching && (models.find(entry => characterKey(entry) === characterKey(currentEntry || {}) && entry.costume === currentEntry?.costume) ||
+      models.find(entry => characterKey(entry) === characterKey(currentEntry || {})))) ||
+    ((!currentEntry || switching) && characters[0]?.outfits[0]);
+  if (selected && scene) {
+    $('#character').value = characterKey(selected);
+    showOutfits(characterKey(selected), selected.id);
+    await loadModel(selected);
+  } else if (currentEntry) {
+    $('#character').add(new Option(currentEntry.name, '', true, true));
+    options($('#outfit'), [['', currentEntry.outfit || 'Outfit from file']]); $('#outfit').disabled = true;
+  } else { showOutfits(''); status('Waiting for a character'); }
+  void logo.setLibrary(library);
+}
+
 async function refreshModels() {
+  if (refreshing || scene.capturing) return;
+  refreshing = true;
   $('#refresh-models').disabled = true;
+  syncLibraryButton();
   try {
     const response = await fetch('/api/chibi-models');
     if (!response.ok) throw new Error('The character list is unavailable. You can still open a GLB file.');
-    models = (await response.json()).models || [];
-    const grouped = new Map();
-    models.forEach(entry => {
-      const key = characterKey(entry);
-      if (!grouped.has(key)) grouped.set(key, {id: key, name: entry.name, outfits: []});
-      grouped.get(key).outfits.push(entry);
-    });
-    characters = [...grouped.values()].sort((a, b) => a.name.localeCompare(b.name));
-    characters.forEach(character => character.outfits.sort((a, b) => (a.costume || '').localeCompare(b.costume || '')));
-    $('#library-count').textContent = `${characters.length} character${characters.length === 1 ? '' : 's'} · ${models.length} outfit${models.length === 1 ? '' : 's'}`;
-    showCharacters();
-    let savedId;
-    try { savedId = localStorage.getItem('chibi-studio-model'); } catch { }
-    const selected = models.find(entry => entry.id === (currentEntry?.id || savedId)) || (!currentEntry && characters[0]?.outfits[0]);
-    if (selected && scene) {
-      $('#character').value = characterKey(selected);
-      showOutfits(characterKey(selected), selected.id);
-      await loadModel(selected);
-    } else if (currentEntry) {
-      $('#character').add(new Option(currentEntry.name, '', true, true));
-      options($('#outfit'), [['', currentEntry.outfit || 'Outfit from file']]); $('#outfit').disabled = true;
-    } else { showOutfits(''); status('Waiting for a character'); }
-    void logo.setLibrary(models);
+    library = (await response.json()).models || [];
+    if (library.length && !library.some(entry => inLibrary(entry, libraryRegion))) libraryRegion = library[0].available_in?.[0] || library[0].region || 'global';
+    await showLibrary();
   } catch (err) { error(err.message); status('Character list unavailable', 'error'); }
-  finally { $('#refresh-models').disabled = false; }
+  finally { refreshing = false; $('#refresh-models').disabled = false; syncLibraryButton(); }
+}
+
+async function switchLibrary() {
+  if (refreshing || scene.capturing) return;
+  libraryRegion = libraryRegion === 'jp' ? 'global' : 'jp';
+  try { localStorage.setItem('chibi-studio-region', libraryRegion); } catch { }
+  $('#character-search').value = '';
+  await showLibrary(true);
 }
 
 function openFile(file) {
@@ -240,6 +280,7 @@ try {
   $('#character').onchange = () => { const entry = showOutfits($('#character').value, currentEntry?.id); if (entry) loadModel(entry); };
   $('#outfit').onchange = () => { const entry = models.find(model => model.id === $('#outfit').value); if (entry) loadModel(entry); };
   $('#refresh-models').onclick = refreshModels;
+  $('#library-toggle').onclick = switchLibrary;
   $('#animation').onchange = () => chooseMotion(Number($('#animation').value));
   $('#motion-category').onchange = showMotions;
   $('#match-expression').onchange = matchExpression;

@@ -42,9 +42,10 @@ def refresh(root, presets, catalog=None):
         faces = {**manifest['faces'], **presets}
         if path.parent.name in entries:
             item = entries[path.parent.name]
-            for key in ('name', 'outfit', 'animation_labels', 'animation_groups'):
-                manifest[key] = item[key]
-        character = {key: manifest.get(key) for key in ('name', 'outfit', 'character_id', 'costume', 'dress_id')}
+            for key in ('name', 'outfit', 'animation_labels', 'animation_groups', 'region', 'name_jp', 'outfit_jp', 'available_in'):
+                if key in item:
+                    manifest[key] = item[key]
+        character = {key: manifest.get(key) for key in ('name', 'outfit', 'character_id', 'costume', 'dress_id', 'region', 'name_jp', 'outfit_jp') if key in manifest}
         character['display_name'] = f"{character['name']} — {character['outfit']}"
         physics_path = path.with_name('physics.json')
         physics = None

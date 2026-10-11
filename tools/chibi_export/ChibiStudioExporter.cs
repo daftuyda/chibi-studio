@@ -218,7 +218,8 @@ public sealed class ChibiStudioExporter : BaseUnityPlugin
         if (clips.Count == 0) throw new InvalidOperationException("Select at least one animation to export.");
         var writer = new ChibiGlbWriter(container.transform);
         writer.CharacterMetadata = new JObject { ["name"] = name, ["outfit"] = (string)item["outfit"] ?? "Racing outfit",
-            ["character_id"] = id, ["costume"] = costume, ["dress_id"] = item["dress_id"] };
+            ["character_id"] = id, ["costume"] = costume, ["dress_id"] = item["dress_id"],
+            ["region"] = (string)item["region"] ?? "global", ["name_jp"] = item["name_jp"], ["outfit_jp"] = item["outfit_jp"] };
         writer.PhysicsMetadata = ReadPhysics(item);
         File.WriteAllText(Path.Combine(folder, "physics.json"), writer.PhysicsMetadata.ToString());
         var labels = new JObject();
@@ -255,6 +256,8 @@ public sealed class ChibiStudioExporter : BaseUnityPlugin
         var manifest = new JObject {
             ["name"] = name, ["character_id"] = id, ["outfit"] = (string)item["outfit"] ?? "Racing outfit",
             ["costume"] = costume, ["dress_id"] = item["dress_id"], ["import_profile"] = item["import_profile"],
+            ["region"] = (string)item["region"] ?? "global", ["name_jp"] = item["name_jp"], ["outfit_jp"] = item["outfit_jp"],
+            ["available_in"] = item["available_in"]?.DeepClone(),
             ["animation_groups"] = item["animation_groups"]?.DeepClone() ?? new JObject(),
             ["model"] = filename, ["animation_labels"] = labels, ["faces"] = writer.Faces,
             ["source"] = "Local game assets assembled by UmaViewer; sampled at 30 fps",

@@ -18,7 +18,9 @@ with sync_playwright() as playwright:
     result = page.evaluate('''async () => {
       const {GLTFLoader} = await import('three/addons/loaders/GLTFLoader.js');
       const {ChibiPhysics} = await import('/assets/chibi-physics.js');
-      const response = await fetch('/chibi-models/1032/model.glb');
+      const catalog = await (await fetch('/api/chibi-models')).json();
+      const tachyon = catalog.models.find(entry => entry.character_id === 1032 && entry.costume === '00');
+      const response = await fetch(tachyon.model_url);
       const gltf = await new GLTFLoader().parseAsync(await response.arrayBuffer(), '');
       const physics = new ChibiPhysics(gltf.scene, gltf.userData.umaPhysics);
       if (!physics.available) throw new Error('Tachyon cloth metadata is missing');
@@ -48,7 +50,7 @@ with sync_playwright() as playwright:
       return {chains: physics.chains.length, movingSleeveBones: changing.length, calculationMs: Math.round(performance.now() - start)};
     }''')
     page.locator('#character').select_option('1032')
-    page.wait_for_function("document.querySelector('#viewport').dataset.model === '1032'")
+    page.wait_for_function("document.querySelector('#viewport').dataset.model === 'jp-1032'")
     page.locator('#animation').select_option(label='Character pose 00 res01')
     page.locator('#timeline').evaluate('el => { el.value = .4; el.dispatchEvent(new Event("input")); }')
     assert not page.locator('#cloth-physics').is_disabled()

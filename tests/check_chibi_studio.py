@@ -8,7 +8,9 @@ from PIL import Image, ImageChops, ImageSequence
 from playwright.sync_api import sync_playwright
 
 URL = os.environ.get('CHIBI_STUDIO_URL', 'http://127.0.0.1:8084').rstrip('/')
-OUTPUT = Path(__file__).resolve().parents[1] / '.local/chibi-studio-check'
+REGION = os.environ.get('CHIBI_STUDIO_REGION', 'global')
+assert REGION in ('global', 'jp'), 'CHIBI_STUDIO_REGION must be global or jp.'
+OUTPUT = Path(__file__).resolve().parents[1] / '.local' / ('chibi-studio-check-jp' if REGION == 'jp' else 'chibi-studio-check')
 OUTPUT.mkdir(parents=True, exist_ok=True)
 
 
@@ -61,10 +63,14 @@ with sync_playwright() as playwright:
     page.on('console', lambda message: errors.append(message.text) if message.type == 'error' else None)
     page.goto(URL + '/chibi')
     page.wait_for_function("document.querySelector('#status').dataset.state === 'ready'")
+    if REGION == 'jp':
+        page.locator('#library-toggle').click()
+        page.wait_for_function("document.documentElement.dataset.libraryRegion === 'jp' && document.querySelector('#status').dataset.state === 'ready'")
+    prefix = 'jp-'
     page.locator('#character').select_option('1030')
-    page.wait_for_function("document.querySelector('#viewport').dataset.model === '1030'")
-    page.locator('#outfit').select_option('1030-40')
-    page.wait_for_function("document.querySelector('#viewport').dataset.model === '1030-40'")
+    page.wait_for_function("id => document.querySelector('#viewport').dataset.model === id", arg=prefix + '1030')
+    page.locator('#outfit').select_option(prefix + '1030-40')
+    page.wait_for_function("id => document.querySelector('#viewport').dataset.model === id", arg=prefix + '1030-40')
     page.locator('#animation').select_option(label='Run')
     page.locator('[data-expression=happy]').click()
     input_value(page, '#timeline', '.28')
