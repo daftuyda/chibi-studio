@@ -2,11 +2,13 @@
 import argparse
 import gzip
 import hashlib
+import io
 import json
 import shutil
 from pathlib import Path
 
 from viewer import ROOT, model_directory, read_model
+from optimize_glb import optimize_glb
 
 
 def file_hash(path):
@@ -64,20 +66,29 @@ def build_site(output, models=None, web=None):
     (output / 'chibi').mkdir()
     (output / 'chibi' / 'index.html').write_text(html, encoding='utf-8')
 
-    catalog = []
-    for entry, path in entries:
-        version = file_hash(path)[:20]
-        relative = Path('chibi-models') / entry['id'] / f'model.{version}.glb'
+    def publish_model(ident, name, content):
+        version = hashlib.sha256(content).hexdigest()[:20]
+        relative = Path('chibi-models') / ident / f'{name}.{version}.glb'
         target = output / relative
-        target.parent.mkdir(parents=True)
-        shutil.copyfile(path, target)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(content)
         # Serve a precompressed copy on hosts with gzip_static support. Browsers
         # still request the GLB URL and transparently decode its response.
-        with path.open('rb') as source, target.with_suffix('.glb.gz').open('wb') as destination:
+        with io.BytesIO(content) as source, target.with_suffix('.glb.gz').open('wb') as destination:
             with gzip.GzipFile(filename='', mode='wb', compresslevel=3,
                                fileobj=destination, mtime=0) as compressed:
                 shutil.copyfileobj(source, compressed)
-        entry['model_url'] = '/' + relative.as_posix()
+        return '/' + relative.as_posix()
+
+    catalog = []
+    for entry, path in entries:
+        source = path.read_bytes()
+        content = optimize_glb(source)
+        entry['model_url'] = publish_model(entry['id'], 'model', content)
+        entry['bytes'] = len(content)
+        if entry.get('character_id') == 1030 and entry.get('costume') == '00':
+            mascot = optimize_glb(source, {'anm_min_eve_type00_run00_loop'})
+            entry['logo_model_url'] = publish_model(entry['id'], 'logo', mascot)
         catalog.append(entry)
     (output / 'api').mkdir()
     (output / 'api' / 'chibi-models').write_text(

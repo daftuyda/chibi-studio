@@ -21,6 +21,13 @@ API server. Models and browser assets have content hashes in their URLs so
 they can be cached until their content changes. HTML and the catalog should
 be revalidated on each visit.
 
+The builder compacts the exported GLBs before publishing them. It shares
+duplicate accessors, buffers and animation samplers, and removes transform
+tracks that remain at the node's rest value in every clip. It preserves clip
+names and durations, geometry, texture bytes, facial presets and cloth data.
+The source files in `models/` stay unchanged. The Rice Shower mascot gets a
+separate, smaller running-only GLB; both versions have their own cache URLs.
+
 The build also writes precompressed `.glb.gz` copies beside the models. The
 included Nginx configuration serves these when the browser accepts gzip,
 reducing downloads without changing the model URLs or decoded files. Other

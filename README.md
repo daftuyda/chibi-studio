@@ -35,7 +35,10 @@ step to start it.
   example of sleeve movement.
 - **Stage:** choose a solid colour, gradient, image or transparent background.
   Toggle the platform, shadows and grid, and adjust the platform and lights.
-  Drag to orbit, scroll to zoom, or enable a slow camera turn.
+  Drag to orbit, right-drag to move, scroll to zoom, or enable a slow camera
+  turn. The camera arrows move left, right, up and down. **Move** switches
+  ordinary dragging to camera movement; touchscreens also support two-finger
+  movement. Arrow keys move the camera when the preview has focus.
 - **Export:** save a transparent PNG or a looping GIF. GIF settings include
   size, shape, frame rate, duration and a full camera turn. Your expression,
   physics and stage settings are included.
@@ -77,6 +80,11 @@ models/
 
 The browser loads outfits on demand. The models are self-contained and do
 not need an installed copy of the game to view them.
+
+Public builds compact repeated animation data and omit transform tracks that
+stay at their rest values in every motion. Geometry, textures, expressions,
+physics metadata and all animation clips are preserved. The running mascot
+uses a smaller file containing just its running animation.
 
 Global availability and official English names are recorded in
 `tools/chibi_export/global-outfits.json`. Each manifest's `available_in` field
@@ -154,7 +162,7 @@ scrubbing and GIF export.
 
 ```sh
 python -m pip install -r requirements-dev.txt
-python -m pytest tests/test_viewer.py tests/test_chibi_import.py tests/test_static_build.py -q
+python -m pytest tests/test_viewer.py tests/test_chibi_import.py tests/test_static_build.py tests/test_optimize_glb.py -q
 ```
 
 With the viewer running, the browser checks use an installed Chrome browser:
@@ -165,6 +173,7 @@ python tests/check_chibi_studio.py
 python tests/check_chibi_physics.py
 python tests/check_chibi_library.py
 python tests/check_chibi_regions.py
+python tests/check_chibi_camera.py
 ```
 
 Set `CHIBI_STUDIO_URL` to check a different address. Captures and reports go

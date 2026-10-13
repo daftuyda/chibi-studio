@@ -53,13 +53,22 @@
     <div class="studio">
       <section class="stage-card" aria-label="3D character preview">
         <div class="stage-heading"><h2 id="stage-name">Your chibi goes here</h2></div>
-        <div id="viewport" tabindex="0" aria-label="3D view. Drag to rotate, scroll or pinch to zoom.">
+        <div id="viewport" tabindex="0" aria-label="3D view. Drag to rotate, right-drag to move, scroll or pinch to zoom. Arrow keys move the camera.">
+          <div class="camera-controls" role="group" aria-label="Move camera">
+            <button id="camera-pan-mode" type="button" aria-pressed="false" title="Drag to move the camera instead of rotating" disabled>Move</button>
+            <div class="camera-pad">
+              <button type="button" data-pan="up" aria-label="Move camera up" title="Move camera up" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 14 6-6 6 6"/></svg></button>
+              <button type="button" data-pan="left" aria-label="Move camera left" title="Move camera left" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
+              <button type="button" data-pan="right" aria-label="Move camera right" title="Move camera right" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button>
+              <button type="button" data-pan="down" aria-label="Move camera down" title="Move camera down" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 10 6 6 6-6"/></svg></button>
+            </div>
+          </div>
           <span id="status" class="sr-only" role="status">Getting ready</span>
           <div id="empty-state" class="empty-state"><div class="empty-icon">✦</div><h3>Add your first chibi</h3><p>Open a character exported for the browser.<br>Your file opens right in the browser.</p><button id="empty-open" class="primary">Open a GLB file</button><p class="empty-note">Characters in the library appear here automatically.</p></div>
           <div id="loading" class="loading" hidden><span class="spinner"></span><p id="loading-text">Preparing your character…</p></div>
           <div id="message" class="message" role="alert" hidden></div>
         </div>
-        <div class="stage-footer"><div class="stage-meta"><span>↔ Drag to orbit <b>·</b> Scroll to zoom</span><details class="model-info"><summary>Model details</summary><p id="model-details">No character loaded.</p></details></div><div class="stage-actions"><button id="reset-camera" class="quiet" disabled>Reset view</button><button id="save-image" class="quiet" disabled>Save PNG</button><button id="save-gif" class="export-button" disabled>Create GIF ↗</button></div></div>
+        <div class="stage-footer"><div class="stage-meta"><span>Drag to orbit <b>·</b> Right-drag to move <b>·</b> Scroll to zoom</span><details class="model-info"><summary>Model details</summary><p id="model-details">No character loaded.</p></details></div><div class="stage-actions"><button id="reset-camera" class="quiet" disabled>Reset view</button><button id="save-image" class="quiet" disabled>Save PNG</button><button id="save-gif" class="export-button" disabled>Create GIF ↗</button></div></div>
       </section>
       <aside class="controls" aria-label="Character controls">
         <div class="control-group character-group">

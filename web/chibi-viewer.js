@@ -3,6 +3,7 @@ import { ChibiScene, disposeModel } from './chibi-scene.js';
 import { setupStageControls } from './stage-controls.js';
 import { setupGifControls } from './gif-controls.js';
 import { createStudioLogo } from './studio-logo.js';
+import { setupCameraControls } from './camera-controls.js';
 
 const $ = selector => document.querySelector(selector);
 const viewport = $('#viewport');
@@ -122,7 +123,13 @@ async function loadModel(entry, file) {
   const token = ++loadToken;
   pendingFetch?.abort();
   pendingFetch = new AbortController();
+  if (!file && currentEntry === entry && scene.model) {
+    $('#loading').hidden = $('#message').hidden = true;
+    status('Ready', 'ready');
+    return;
+  }
   $('#loading').hidden = false;
+  $('#loading-text').textContent = file ? 'Opening your character…' : 'Downloading your character…';
   $('#message').hidden = true;
   status('Loading');
   try {
@@ -138,6 +145,8 @@ async function loadModel(entry, file) {
     }
     const json = inspectGlb(buffer);
     entry.physics = json.extras?.umaPhysics;
+    if (token !== loadToken) return;
+    $('#loading-text').textContent = 'Preparing your character…';
     const gltf = await new GLTFLoader().parseAsync(buffer, '');
     if (token !== loadToken) { disposeModel(gltf.scene); return; }
     if (file) {
@@ -166,6 +175,7 @@ async function loadModel(entry, file) {
     $('#animation').disabled = $('#play-pause').disabled = $('#timeline').disabled = $('#speed').disabled = !scene.clips.length;
     $('#clip-count').textContent = `${scene.clips.length} clip${scene.clips.length === 1 ? '' : 's'}`;
     for (const id of ['reset-camera', 'save-image', 'turntable']) $(`#${id}`).disabled = false;
+    viewport.querySelectorAll('[data-pan], #camera-pan-mode').forEach(button => { button.disabled = false; });
     $('#save-gif').disabled = !scene.clips.length;
     $('#cloth-physics').disabled = !stats.physics;
     $('#cloth-physics').checked = scene.physicsEnabled;
@@ -297,6 +307,7 @@ try {
     link.href = scene.screenshot(); link.click();
   };
   setupStageControls(scene, error);
+  setupCameraControls(scene);
   setupGifControls(scene, () => {
     const clip = scene.clips[scene.clipIndex]?.name || 'animation';
     return `${currentEntry ? displayName(currentEntry) : 'chibi'}-${currentEntry?.animation_labels?.[clip] || clip}`;

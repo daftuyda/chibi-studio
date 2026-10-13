@@ -44,6 +44,14 @@ main{max-width:2048px;padding:18px 28px 20px;margin:auto}
 .stage-heading h2{margin:0;font-size:20px;line-height:1.35;letter-spacing:-.45px;font-weight:750;text-wrap:balance}
 #viewport{position:relative;width:100%;flex:1;min-height:0;touch-action:none}
 #viewport canvas{display:block;width:100%;height:100%}
+.camera-controls{position:absolute;right:12px;bottom:12px;z-index:2;display:flex;align-items:center;gap:8px}
+.camera-controls button{display:grid;place-items:center;background:var(--overlay);color:var(--ink);border:1px solid var(--line);border-radius:10px;box-shadow:0 2px 8px var(--shadow);touch-action:manipulation}
+#camera-pan-mode{height:36px;padding:0 12px;font-size:12px;font-weight:650}
+#camera-pan-mode[aria-pressed=true]{background:var(--purple);color:var(--on-accent);border-color:var(--purple)}
+.camera-pad{display:grid;grid-template:repeat(3,36px)/repeat(3,36px);gap:3px}
+.camera-pad button{width:36px;height:36px;padding:7px}
+.camera-pad svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.camera-pad [data-pan=up]{grid-area:1/2}.camera-pad [data-pan=left]{grid-area:2/1}.camera-pad [data-pan=right]{grid-area:2/3}.camera-pad [data-pan=down]{grid-area:3/2}
 .stage-footer{position:relative;flex:none;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;border-top:1px solid var(--line);font-size:10px;color:var(--muted)}
 .stage-footer b{margin:0 6px;font-weight:400}.stage-actions,.stage-meta{display:flex;align-items:center;gap:8px}.stage-meta{gap:12px}
 .model-info{flex:none;font-size:9px}.model-info summary{cursor:pointer;white-space:nowrap;border-radius:3px}

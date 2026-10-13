@@ -26,9 +26,16 @@ export function createStudioLogo(element) {
       const request = pending = new AbortController();
       let gltf;
       try {
-        const response = await fetch(rice.model_url, {signal: request.signal});
+        const response = await fetch(rice.logo_model_url || rice.model_url, {signal: request.signal, priority: 'low'});
         if (!response.ok) throw new Error('Logo character unavailable');
-        gltf = await new GLTFLoader().parseAsync(await response.arrayBuffer(), '');
+        const loader = new GLTFLoader().register(parser => ({
+          name: 'StudioMascot',
+          beforeRoot() {
+            // Local libraries also skip decoding motions the mascot never uses.
+            parser.json.animations = (parser.json.animations || []).filter(clip => clip.name === 'anm_min_eve_type00_run00_loop');
+          },
+        }));
+        gltf = await loader.parseAsync(await response.arrayBuffer(), '');
         if (disposed) { disposeModel(gltf.scene); return; }
         const run = gltf.animations.find(clip => clip.name === 'anm_min_eve_type00_run00_loop');
         if (!run) throw new Error('Logo running animation unavailable');

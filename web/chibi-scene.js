@@ -44,7 +44,8 @@ export class ChibiScene {
     element.prepend(this.renderer.domElement);
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
     this.controls.enableDamping = true;
-    this.controls.enablePan = false;
+    this.controls.enablePan = true;
+    this.controls.screenSpacePanning = true;
     this.controls.minDistance = 2.5;
     this.controls.maxDistance = 10;
     this.controls.maxPolarAngle = Math.PI / 2 + 0.02;
@@ -106,8 +107,26 @@ export class ChibiScene {
   }
 
   resetCamera() {
+    if (this.capturing) return;
+    const damping = this.controls.enableDamping, orbit = this.controls.autoRotate;
+    this.controls.enableDamping = this.controls.autoRotate = false;
+    this.controls.update(); // Finish any pending drag before restoring the view.
     this.camera.position.set(0, 1.4, 5.4);
     this.controls.target.set(0, 1.07, 0);
+    this.controls.update();
+    this.controls.enableDamping = damping;
+    this.controls.autoRotate = orbit;
+  }
+
+  panCamera(horizontal, vertical) {
+    if (this.capturing || !this.model) return;
+    const distance = this.camera.position.distanceTo(this.controls.target);
+    const height = 2 * distance * Math.tan(THREE.MathUtils.degToRad(this.camera.fov / 2));
+    this.camera.updateMatrix();
+    const offset = new THREE.Vector3().setFromMatrixColumn(this.camera.matrix, 0).multiplyScalar(horizontal * height)
+      .addScaledVector(new THREE.Vector3().setFromMatrixColumn(this.camera.matrix, 1), vertical * height);
+    this.camera.position.add(offset);
+    this.controls.target.add(offset);
     this.controls.update();
   }
 
@@ -182,8 +201,9 @@ export class ChibiScene {
     const model = gltf.scene;
     const mixer = new THREE.AnimationMixer(model);
     const clips = gltf.animations || [];
-    const actions = clips.map(clip => mixer.clipAction(clip));
+    const actions = new Array(clips.length);
     const initialIndex = Math.max(0, clips.findIndex(clip => /idle/i.test(clip.name)));
+    if (clips[initialIndex]) actions[initialIndex] = mixer.clipAction(clips[initialIndex]);
     actions[initialIndex]?.play();
     mixer.update(0);
     model.updateMatrixWorld(true);
@@ -283,8 +303,8 @@ export class ChibiScene {
   }
 
   playClip(index, fade = true) {
-    let next = this.actions?.[index];
-    if (!next) return;
+    if (!this.clips?.[index]) return;
+    let next = this.actions[index] ||= this.mixer.clipAction(this.clips[index]);
     if (this.physicsEnabled && this.physics?.available) {
       if (!this.physicsActions[index]) this.physicsActions[index] = this.mixer.clipAction(this.physics.clip(this.clips[index]));
       next = this.physicsActions[index];
